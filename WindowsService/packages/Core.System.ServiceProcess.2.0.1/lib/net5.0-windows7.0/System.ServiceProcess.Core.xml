@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.ServiceProcess.Core</name>
+    </assembly>
+    <members>
+        <member name="T:System.ServiceProcess.Design.ServiceInstallerDialogResult">
+            <summary>Specifies the return value of a <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialog" /> form.</summary>
+        </member>
+        <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.OK">
+            <summary>The dialog return value is <see langword="OK" />. This value typically indicates that the user confirmed the account properties and pressed the <see langword="OK" /> button to close the dialog.</summary>
+        </member>
+        <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.UseSystem">
+            <summary>Install the service with a system account rather than a user account. This value typically indicates that the dialog was not displayed to the user. For example, the <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Account" /> property is set to something other than <see langword="User" />.</summary>
+        </member>
+        <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.Canceled">
+            <summary>The dialog return value is <see langword="Canceled" />. This value typically indicates that the user canceled out of the dialog without setting the account fields.</summary>
+        </member>
+        <member name="T:System.ServiceProcess.Design.ServiceInstallerDialog">
+            <summary>Provides a dialog box, which prompts for account information of a Windows Service application.</summary>
+        </member>
+        <member name="M:System.ServiceProcess.Design.ServiceInstallerDialog.#ctor">
+            <summary>Initializes a new instance of the service account form.</summary>
+        </member>
+        <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Password">
+            <summary>Gets or sets the password for the service account form.</summary>
+            <returns>A string representing the password in the service account form. The default is an empty string ("").</returns>
+        </member>
+        <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Result">
+            <summary>Gets the dialog result for the service account form.</summary>
+            <returns>A <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialogResult" /> indicating the user response to the dialog box. The default is <see langword="OK" />.</returns>
+        </member>
+        <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Username">
+            <summary>Gets or sets the user name for the service account form.</summary>
+            <returns>A string representing the user name in the service account form. The default is an empty string ("").</returns>
+        </member>
+        <member name="M:System.ServiceProcess.Design.ServiceInstallerDialog.Main">
+            <summary>Begins running a standard application message loop and displays the service account form.</summary>
+        </member>
+        <member name="T:System.ServiceProcess.ServiceAccount">
+            <summary>Specifies a service's security context, which defines its logon type.</summary>
+        </member>
+        <member name="F:System.ServiceProcess.ServiceAccount.LocalService">
+            <summary>An account that acts as a non-privileged user on the local computer, and presents anonymous credentials to any remote server.</summary>
+        </member>
+        <member name="F:System.ServiceProcess.ServiceAccount.NetworkService">
+            <summary>An account that provides extensive local privileges, and presents the computer's credentials to any remote server.</summary>
+        </member>
+        <member name="F:System.ServiceProcess.ServiceAccount.LocalSystem">
+            <summary>An account, used by the service control manager, that has extensive privileges on the local computer and acts as the computer on the network.</summary>
+        </member>
+        <member name="F:System.ServiceProcess.ServiceAccount.User">
+            <summary>An account defined by a specific user on the network. Specifying <see langword="User" /> for the <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Account" /> member causes the system to prompt for a valid user name and password when the service is installed, unless you set values for both the <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Username" /> and <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Password" /> properties of your <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> instance.</summary>
+        </member>
+        <member name="T:System.ServiceProcess.ServiceInstaller">
+            <summary>Installs a class that extends <see cref="T:System.ServiceProcess.ServiceBase" /> to implement a service. This class is called by the install utility when installing a service application.</summary>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.ServiceProcess.ServiceInstaller" /> class.</summary>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceInstaller.DisplayName">
+            <summary>Indicates the friendly name that identifies the service to the user.</summary>
+            <returns>The name associated with the service, used frequently for interactive tools.</returns>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceInstaller.Description">
+            <summary>Gets or sets the description for the service.</summary>
+            <returns>The description of the service. The default is an empty string ("").</returns>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceInstaller.ServicesDependedOn">
+            <summary>Indicates the services that must be running for this service to run.</summary>
+            <returns>An array of services that must be running before the service associated with this installer can run.</returns>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceInstaller.ServiceName">
+            <summary>Indicates the name used by the system to identify this service. This property must be identical to the <see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> of the service you want to install.</summary>
+            <returns>The name of the service to be installed. This value must be set before the install utility attempts to install the service.</returns>
+            <exception cref="T:System.ArgumentException">The <see cref="P:System.ServiceProcess.ServiceInstaller.ServiceName" /> property is invalid.</exception>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceInstaller.StartType">
+            <summary>Indicates how and when this service is started.</summary>
+            <returns>A <see cref="T:System.ServiceProcess.ServiceStartMode" /> that represents the way the service is started. The default is <see langword="Manual" />, which specifies that the service will not automatically start after reboot.</returns>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The start mode is not a value of the <see cref="T:System.ServiceProcess.ServiceStartMode" /> enumeration.</exception>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceInstaller.DelayedAutoStart">
+            <summary>Gets or sets a value that indicates whether the service should be delayed from starting until other automatically started services are running.</summary>
+            <returns>
+              <see langword="true" /> to delay automatic start of the service; otherwise, <see langword="false" />. The default is <see langword="false" />.</returns>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+            <summary>Copies properties from an instance of <see cref="T:System.ServiceProcess.ServiceBase" /> to this installer.</summary>
+            <param name="component">The <see cref="T:System.ComponentModel.IComponent" /> from which to copy.</param>
+            <exception cref="T:System.ArgumentException">The component you are associating with this installer does not inherit from <see cref="T:System.ServiceProcess.ServiceBase" />.</exception>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)">
+            <summary>Installs the service by writing service application information to the registry. This method is meant to be used by installation tools, which process the appropriate methods automatically.</summary>
+            <param name="stateSaver">An <see cref="T:System.Collections.IDictionary" /> that contains the context information associated with the installation.</param>
+            <exception cref="T:System.InvalidOperationException">The installation does not contain a <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> for the executable.  
+             -or-  
+             The file name for the assembly is <see langword="null" /> or an empty string.  
+             -or-  
+             The service name is invalid.  
+             -or-  
+             The Service Control Manager could not be opened.</exception>
+            <exception cref="T:System.ArgumentException">The display name for the service is more than 255 characters in length.</exception>
+            <exception cref="T:System.ComponentModel.Win32Exception">The system could not generate a handle to the service.  
+             -or-  
+             A service with that name is already installed.</exception>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)">
+            <summary>Indicates whether two installers would install the same service.</summary>
+            <param name="otherInstaller">A <see cref="T:System.Configuration.Install.ComponentInstaller" /> to which you are comparing the current installer.</param>
+            <returns>
+              <see langword="true" /> if calling <see cref="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)" /> on both of these installers would result in installing the same service; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.RemoveService">
+            <!-- Failed to insert some or all of included XML --><include file="doc\ServiceInstaller.uex" path="docs/doc[@for=&quot;ServiceInstaller.RemoveService&quot;]/*" />
+            <devdoc>
+            Called by Rollback and Uninstall to remove the service.
+            </devdoc>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.Rollback(System.Collections.IDictionary)">
+            <summary>Rolls back service application information written to the registry by the installation procedure. This method is meant to be used by installation tools, which process the appropriate methods automatically.</summary>
+            <param name="savedState">An <see cref="T:System.Collections.IDictionary" /> that contains the context information associated with the installation.</param>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.ShouldSerializeServicesDependedOn">
+            <!-- Failed to insert some or all of included XML --><include file="doc\ServiceInstaller.uex" path="docs/doc[@for=&quot;ServiceInstaller.ShouldSerializeServicesDependedOn&quot;]/*" />
+            <devdoc>
+            <para> Indicates whether the <see cref="P:System.ServiceProcess.ServiceInstaller.ServicesDependedOn" /> property should be 
+               persisted, which corresponds to whether there are services that this service depends
+               on.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceInstaller.Uninstall(System.Collections.IDictionary)">
+            <summary>Uninstalls the service by removing information about it from the registry.</summary>
+            <param name="savedState">An <see cref="T:System.Collections.IDictionary" /> that contains the context information associated with the installation.</param>
+            <exception cref="T:System.ComponentModel.Win32Exception">The Service Control Manager could not be opened.  
+             -or-  
+             The system could not get a handle to the service.</exception>
+        </member>
+        <member name="T:System.ServiceProcess.ServiceProcessInstaller">
+            <summary>Installs an executable containing classes that extend <see cref="T:System.ServiceProcess.ServiceBase" />. This class is called by installation utilities, such as InstallUtil.exe, when installing a service application.</summary>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceProcessInstaller.HelpText">
+            <summary>Gets help text displayed for service installation options.</summary>
+            <returns>Help text that provides a description of the steps for setting the user name and password in order to run the service under a particular account.</returns>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceProcessInstaller.Password">
+            <summary>Gets or sets the password associated with the user account under which the service application runs.</summary>
+            <returns>The password associated with the account under which the service should run. The default is an empty string (""). The property is not public, and is never serialized.</returns>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceProcessInstaller.Account">
+            <summary>Gets or sets the type of account under which to run this service application.</summary>
+            <returns>A <see cref="T:System.ServiceProcess.ServiceAccount" /> that defines the type of account under which the system runs this service. The default is <see langword="User" />.</returns>
+        </member>
+        <member name="P:System.ServiceProcess.ServiceProcessInstaller.Username">
+            <summary>Gets or sets the user account under which the service application will run.</summary>
+            <returns>The account under which the service should run. The default is an empty string ("").</returns>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceProcessInstaller.AccountHasRight(System.IntPtr,System.Byte[],System.String)">
+            <!-- Failed to insert some or all of included XML --><include file="doc\ServiceProcessInstaller.uex" path="docs/doc[@for=&quot;ServiceProcessInstaller.AccountHasRight&quot;]/*" />
+            <devdoc>
+            Enumerates through the rights of the given account and checks whether the given right
+            is in the list.
+            </devdoc>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceProcessInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+            <summary>Implements the base class <see cref="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)" /> method with no <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> class-specific behavior.</summary>
+            <param name="comp">The <see cref="T:System.ComponentModel.IComponent" /> that represents the service process.</param>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceProcessInstaller.GrantAccountRight(System.IntPtr,System.Byte[],System.String)">
+            <!-- Failed to insert some or all of included XML --><include file="doc\ServiceProcessInstaller.uex" path="docs/doc[@for=&quot;ServiceProcessInstaller.GrantAccountRight&quot;]/*" />
+            <devdoc>
+            Grants the named right to the given account.
+            </devdoc>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceProcessInstaller.Install(System.Collections.IDictionary)">
+            <summary>Writes service application information to the registry. This method is meant to be used by installation tools, which call the appropriate methods automatically.</summary>
+            <param name="stateSaver">An <see cref="T:System.Collections.IDictionary" /> that contains the context information associated with the installation.</param>
+            <exception cref="T:System.ArgumentException">The <paramref name="stateSaver" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceProcessInstaller.OpenSecurityPolicy">
+            <!-- Failed to insert some or all of included XML --><include file="doc\ServiceProcessInstaller.uex" path="docs/doc[@for=&quot;ServiceProcessInstaller.OpenSecurityPolicy&quot;]/*" />
+            <devdoc>
+            Returns an LSA handle to the local machine's security policy. Call LsaClose when finished.
+            </devdoc>
+        </member>
+        <member name="M:System.ServiceProcess.ServiceProcessInstaller.Rollback(System.Collections.IDictionary)">
+            <summary>Rolls back service application information written to the registry by the installation procedure. This method is meant to be used by installation tools, which process the appropriate methods automatically.</summary>
+            <param name="savedState">An <see cref="T:System.Collections.IDictionary" /> that contains the context information associated with the installation.</param>
+            <exception cref="T:System.ArgumentException">The <paramref name="savedState" /> is <see langword="null" />.  
+             -or-  
+             The <paramref name="savedState" /> is corrupted or non-existent.</exception>
+        </member>
+    </members>
+</doc>
