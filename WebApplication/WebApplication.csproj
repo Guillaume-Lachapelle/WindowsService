@@ -239,6 +239,7 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApplicationConfig.cs" />
+    <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Filters\GenericExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
