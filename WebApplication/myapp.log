@@ -13,3 +13,42 @@
 2023-01-11 16:34:28,219 [1] INFO MonitoringLogger - Web app finished connecting
 2023-01-11 16:34:31,898 [16] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
 2023-01-11 16:34:36,651 [6] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-01-17 19:39:44,561 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 19:39:44,580 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 19:41:43,255 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 19:41:43,280 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 19:42:31,436 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 19:42:31,451 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 20:51:20,724 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 20:51:20,738 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 20:51:51,961 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 20:51:51,973 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 20:52:01,945 [14] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-01-17 20:57:25,863 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 20:57:25,875 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 20:58:02,825 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 20:58:02,838 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:04:16,815 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:04:16,827 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:04:35,775 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:04:35,786 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:04:43,894 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-01-17 21:05:11,852 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:05:11,863 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:05:19,423 [7] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-01-17 21:06:32,477 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:06:32,489 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:06:39,743 [7] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-01-17 21:07:46,243 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:07:46,254 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:07:53,668 [7] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-01-17 21:08:12,778 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:08:12,789 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:08:55,513 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:08:55,525 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:08:59,647 [7] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-01-17 21:09:42,911 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:09:42,922 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:09:56,919 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-01-17 21:09:56,931 [1] INFO MonitoringLogger - Web app finished connecting
+2023-01-17 21:10:00,443 [9] INFO MonitoringLogger - Request successful for endpoint GET api/students

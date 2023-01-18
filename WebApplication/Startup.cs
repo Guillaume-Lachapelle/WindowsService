@@ -16,6 +16,7 @@ namespace WebApplication
     {
         public static void Configuration(IAppBuilder app)
         {
+            
             var apiConfig = new HttpConfiguration();
 
             apiConfig.Formatters.Remove(apiConfig.Formatters.XmlFormatter);
