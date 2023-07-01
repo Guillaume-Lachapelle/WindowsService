@@ -265,3 +265,4 @@ C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsSe
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.CopyComplete
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
