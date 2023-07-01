@@ -8,15 +8,19 @@ namespace WebApplication
     {
         public static void Register(HttpConfiguration config)
         {
+            // Remove existing routes
+            config.Routes.Clear();
+
+            // Other configuration settings for Web API
             config.MapHttpAttributeRoutes();
 
-            // Get the web application to navigate to the swagger page
+            // Redirect to Swagger UI
             config.Routes.MapHttpRoute(
                 name: "Swagger UI",
                 routeTemplate: "",
                 defaults: null,
                 constraints: null,
-                handler: new RedirectHandler(SwaggerDocsConfig.DefaultRootUrlResolver, "swagger/ui/index")
+                handler: new RedirectHandler((message => message.RequestUri.ToString()), "swagger/ui/index")
             );
         }
     }

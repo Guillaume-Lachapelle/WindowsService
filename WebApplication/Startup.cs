@@ -1,5 +1,4 @@
-﻿// Class that gets the web api started. It enables swagger, starts the authentication, and registers a couple of elements essential for the results to show.
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
 using System.Configuration;
 using System.Web.Http;
@@ -14,14 +13,14 @@ namespace WebApplication
 {
     public class Startup
     {
-        public static void Configuration(IAppBuilder app)
+        public void Configuration(IAppBuilder app)
         {
-            
             var apiConfig = new HttpConfiguration();
-
             apiConfig.Formatters.Remove(apiConfig.Formatters.XmlFormatter);
-
             apiConfig.MapHttpAttributeRoutes();
+
+            // Call the Register method from WebApplicationConfig
+            WebApplicationConfig.Register(apiConfig);
 
             apiConfig.EnableSwagger(c =>
             {
@@ -29,13 +28,9 @@ namespace WebApplication
             }).EnableSwaggerUi();
 
             var container = new ServiceContainer();
-
             apiConfig.Filters.Add(new GenericExceptionFilterAttribute());
-
             container.RegisterApiControllers();
-
             container.EnableWebApi(apiConfig);
-
             app.UseWebApi(apiConfig);
 
             DatabaseHandler handler = new DatabaseHandler();

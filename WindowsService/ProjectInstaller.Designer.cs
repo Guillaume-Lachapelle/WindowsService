@@ -39,9 +39,9 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "A sample service";
-            this.serviceInstaller1.DisplayName = "MyNewService Display Name";
-            this.serviceInstaller1.ServiceName = "MyNewService";
+            this.serviceInstaller1.Description = "A sample service to interract with the database";
+            this.serviceInstaller1.DisplayName = "SchoolManagement Display Name";
+            this.serviceInstaller1.ServiceName = "SchoolManagement";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
