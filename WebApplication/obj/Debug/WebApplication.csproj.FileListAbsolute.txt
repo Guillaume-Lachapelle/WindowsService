@@ -132,9 +132,6 @@ C:\Users\guill\OneDrive - Concordia University - Canada\Other\WindowsService\Web
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\WindowsService\WebApplication\bin\System.Web.Http.SelfHost.dll
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\WindowsService\WebApplication\bin\System.Web.Http.Owin.xml
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\WindowsService\WebApplication\bin\System.Web.Http.SelfHost.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.App.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.AssemblyReference.cache
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\log4net.config
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WebApplication.dll.config
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WebApplication.dll
@@ -264,6 +261,9 @@ C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsSe
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Topshelf.xml
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WindowsService.pdb
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WindowsService.exe.config
+C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.App.config
+C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.AssemblyReference.cache
+C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.csproj.CopyComplete
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Debug\WebApplication.pdb

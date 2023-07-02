@@ -242,6 +242,7 @@
     <Compile Include="Controllers\StudentSearchController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\TeacherSearchController.cs" />
     <Compile Include="Filters\GenericExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

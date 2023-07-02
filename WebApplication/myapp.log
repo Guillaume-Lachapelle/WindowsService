@@ -387,3 +387,30 @@
 2023-07-02 14:43:56,844 [6] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
 2023-07-02 14:44:08,833 [6] ERROR MonitoringLogger - Request failed for endpoint GET api/student/search/40203326. No student found with the requested ID 40203326.
 2023-07-02 14:44:13,362 [5] ERROR MonitoringLogger - Request failed for endpoint GET api/student/search/gfsd. No student found with the requested ID gfsd.
+2023-07-02 14:47:18,195 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-02 14:47:18,203 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-02 14:47:18,417 [10] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:48:37,848 [11] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:48:51,732 [14] ERROR MonitoringLogger - Request failed for endpoint GET api/student/search/40203326. No student found with the requested ID 40203326.
+2023-07-02 14:48:58,574 [8] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:49:13,324 [11] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:49:20,527 [8] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-02 14:49:24,614 [5] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:49:25,896 [14] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:49:26,333 [15] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:49:26,771 [16] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:50:05,453 [20] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:50:53,077 [11] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-02 14:50:57,021 [18] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 14:50:58,577 [21] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-02 16:28:55,001 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-02 16:28:55,009 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-02 16:29:03,768 [10] ERROR MonitoringLogger - Request failed for endpoint GET api/teacher/search/1234. No teacher found with the requested ID 1234.
+2023-07-02 16:29:37,917 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-02 16:29:37,926 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-02 16:29:42,926 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-02 16:29:53,054 [9] ERROR MonitoringLogger - Request failed for endpoint GET api/teacher/search/1234. No teacher found with the requested ID 1234.
+2023-07-02 16:30:00,849 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teacher/search/T12345678.
+2023-07-02 16:30:29,181 [11] INFO MonitoringLogger - Request successful for endpoint GET api/teacher/search/T12345678.
+2023-07-02 16:30:36,125 [16] ERROR MonitoringLogger - Request failed for endpoint GET api/teacher/search/T12345677. No teacher found with the requested ID T12345677.
+2023-07-02 16:30:39,433 [12] INFO MonitoringLogger - Request successful for endpoint GET api/teacher/search/T12345678.

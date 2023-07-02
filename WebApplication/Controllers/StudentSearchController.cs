@@ -15,8 +15,8 @@ namespace WebApplication.Controllers
         {
             try
             {
-                RetrieveStudents info = new RetrieveStudents();
-                StudentDataModel student = info.FindStudent(ID);
+                FindByID info = new FindByID();
+                StudentDataModel student = info.Find<StudentDataModel>(ID);
                 if(student.ID != null && student.ID != "")
                 {
                     Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/student/search/{ID}.");

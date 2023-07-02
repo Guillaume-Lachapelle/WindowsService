@@ -147,6 +147,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\FindByID.cs" />
     <Compile Include="Helpers\ScriptHandler.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Models\StudentDataModel.cs" />
@@ -193,6 +194,7 @@
     <Content Include="Scripts\CreateTables.sql" />
     <Content Include="Scripts\GetStudent.sql" />
     <Content Include="Scripts\GetStudentsContent.sql" />
+    <Content Include="Scripts\GetTeacher.sql" />
     <Content Include="Scripts\GetTeachersContent.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
