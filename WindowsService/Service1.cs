@@ -52,7 +52,7 @@ namespace WindowsService
             List<TeacherDataModel> teachers = teachersTable.RetrieveTableContents();
 
             // SQL retrieve data from Students table
-            RetrieveStudentsTable studentsTable = new RetrieveStudentsTable();
+            RetrieveStudents studentsTable = new RetrieveStudents();
             List<StudentDataModel> students = studentsTable.RetrieveTableContents();
 
             /*foreach(var teacher in teachers)

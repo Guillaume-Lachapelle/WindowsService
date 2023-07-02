@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Web.Http;
 using WindowsService.Helpers;
 using WindowsService.Models;
@@ -14,9 +15,9 @@ namespace WebApplication.Controllers
         {
             try
             {
-                RetrieveStudentsTable info = new RetrieveStudentsTable();
+                RetrieveStudents info = new RetrieveStudents();
                 StudentDataModel student = info.FindStudent(ID);
-                if (student.ID != null)
+                if(student.ID != null && student.ID != "")
                 {
                     Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/student/search/{ID}.");
                     return Ok(student);

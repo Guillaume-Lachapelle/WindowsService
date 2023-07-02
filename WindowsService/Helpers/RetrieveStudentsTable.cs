@@ -5,10 +5,12 @@ using System.IO;
 using System.Data;
 using WindowsService.Models;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace WindowsService.Helpers
 {
-    public class RetrieveStudentsTable
+    public class RetrieveStudents
     {
         private DataTable dataTable = new DataTable();
         private ScriptHandler scriptHandler = new ScriptHandler();
@@ -43,17 +45,31 @@ namespace WindowsService.Helpers
 
         public StudentDataModel FindStudent(string ID)
         {
-            StudentDataModel studentData = new StudentDataModel();
-            List<StudentDataModel> retrievedStudents = RetrieveTableContents();
-            foreach (StudentDataModel student in retrievedStudents)
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            string filePathGetInfoTable = databaseConnection.Connect("GetStudent.sql");
+            dataTable = scriptHandler.ExecuteGetRequestContentFile(databaseConnection.server2, filePathGetInfoTable, ID);
+
+            if(dataTable.Rows.Count > 0)
             {
-                if (student.ID.Equals(ID))
+                StudentDataModel studentData = new StudentDataModel()
                 {
-                    studentData = student;
-                }
+                    ID = dataTable.Rows[0]["ID"].ToString(),
+                    FirstName = dataTable.Rows[0]["FirstName"].ToString(),
+                    LastName = dataTable.Rows[0]["LastName"].ToString(),
+                    Program = dataTable.Rows[0]["Program"].ToString(),
+                    SchoolEmail = dataTable.Rows[0]["SchoolEmail"].ToString(),
+                    YearOfAdmission = dataTable.Rows[0]["YearOfAdmission"].ToString(),
+                    Classes = dataTable.Rows[0]["Classes"].ToString(),
+                    Graduated = dataTable.Rows[0]["Graduated"].ToString()
+                };
+                return studentData;
             }
-            return studentData;
+            else
+            {
+                return new StudentDataModel();
+            }
         }
+
 
     }
 }

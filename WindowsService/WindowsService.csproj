@@ -191,6 +191,7 @@
   <ItemGroup>
     <Content Include="Scripts\CreateDatabase.sql" />
     <Content Include="Scripts\CreateTables.sql" />
+    <Content Include="Scripts\GetStudent.sql" />
     <Content Include="Scripts\GetStudentsContent.sql" />
     <Content Include="Scripts\GetTeachersContent.sql" />
   </ItemGroup>

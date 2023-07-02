@@ -31,8 +31,9 @@ namespace WindowsService.Helpers
             }
         }
 
-        public DataTable ExecuteGetRequestContentFile(string connectionString, string filePath)
+        public DataTable ExecuteGetRequestContentFile(string connectionString, string filePath, string ID = "")
         {
+            dataTable.Clear();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string data = File.ReadAllText(filePath);
@@ -41,10 +42,11 @@ namespace WindowsService.Helpers
 
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@ID", ID);
                     cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    //this will query your datatable and return the result to your datatable
+                    // this will query your datatable and return the result to your datatable
                     adapter.Fill(dataTable);
                     adapter.Dispose();
                 }
@@ -52,5 +54,6 @@ namespace WindowsService.Helpers
             }
             return dataTable;
         }
+
     }
 }

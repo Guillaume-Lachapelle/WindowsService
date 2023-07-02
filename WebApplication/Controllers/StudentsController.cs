@@ -14,7 +14,7 @@ namespace WebApplication.Controllers
         {
             try
             {
-                RetrieveStudentsTable info = new RetrieveStudentsTable();
+                RetrieveStudents info = new RetrieveStudents();
                 var inst = info.RetrieveTableContents();
                 if (inst.Count != 0)
                 {
