@@ -6,22 +6,23 @@ using System.Data;
 using WindowsService.Models;
 using System.Collections.Generic;
 
-namespace WindowsService.Scripts
+namespace WindowsService.Helpers
 {
     public class RetrieveTeachersTable
     {
         private DataTable dataTable = new DataTable();
+        private ScriptHandler scriptHandler = new ScriptHandler();
 
         public List<TeacherDataModel> RetrieveTableContents()
         {
-            var retrievedTeachers = new List<TeacherDataModel>();
+            List<TeacherDataModel> retrievedTeachers = new List<TeacherDataModel>();
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string filePathGetInfoTable = databaseConnection.Connect("GetTeachersContent.sql");
             string server = databaseConnection.server2;
 
             // Data is stored in dataTable object
-            ExecuteGetTeachersContentFile(server, filePathGetInfoTable);
+            dataTable = scriptHandler.ExecuteGetRequestContentFile(server, filePathGetInfoTable);
             foreach (DataRow row in dataTable.Rows)
             {
                 TeacherDataModel teacherData = new TeacherDataModel()
@@ -38,27 +39,6 @@ namespace WindowsService.Scripts
                 retrievedTeachers.Add(teacherData);
             }
             return retrievedTeachers;
-        }
-
-        private void ExecuteGetTeachersContentFile(string connectionString, string filePath)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string data = File.ReadAllText(filePath);
-
-                conn.Open();
-
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    //this will query your datatable and return the result to your datatable
-                    adapter.Fill(dataTable);
-                    adapter.Dispose();
-                }
-                conn.Close();
-            }
         }
 
     }

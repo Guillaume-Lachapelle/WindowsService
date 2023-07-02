@@ -5,7 +5,7 @@ using System.Web.Http;
 using LightInject;
 using Swashbuckle.Application;
 using WebApplication.Filters;
-using WindowsService.Scripts;
+using WindowsService.Helpers;
 
 [assembly: OwinStartup(typeof(WebApplication.Startup))]
 

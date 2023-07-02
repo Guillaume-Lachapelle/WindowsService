@@ -17,6 +17,7 @@ C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsSe
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Managed.Core.targets
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Buffers.dll
@@ -79,6 +80,7 @@ C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsSe
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Topshelf.dll
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WebActivatorEx.dll
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WindowsService.exe
+C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Antlr3.Runtime.xml
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Autofac.xml
 C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Autofac.Integration.WebApi.xml

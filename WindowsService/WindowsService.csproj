@@ -147,6 +147,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\ScriptHandler.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Models\StudentDataModel.cs" />
     <Compile Include="Models\TeacherDataModel.cs" />
@@ -156,10 +157,10 @@
     <Compile Include="ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scripts\DatabaseConnection.cs" />
-    <Compile Include="Scripts\DatabaseHandler.cs" />
-    <Compile Include="Scripts\RetrieveStudentsTable.cs" />
-    <Compile Include="Scripts\RetrieveTeachersTable.cs" />
+    <Compile Include="Helpers\DatabaseConnection.cs" />
+    <Compile Include="Helpers\DatabaseHandler.cs" />
+    <Compile Include="Helpers\RetrieveStudentsTable.cs" />
+    <Compile Include="Helpers\RetrieveTeachersTable.cs" />
     <Compile Include="Service1.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -6,22 +6,23 @@ using System.Data;
 using WindowsService.Models;
 using System.Collections.Generic;
 
-namespace WindowsService.Scripts
+namespace WindowsService.Helpers
 {
     public class RetrieveStudentsTable
     {
         private DataTable dataTable = new DataTable();
+        private ScriptHandler scriptHandler = new ScriptHandler();
 
         public List<StudentDataModel> RetrieveTableContents()
         {
-            var retrievedStudents = new List<StudentDataModel>();
+            List<StudentDataModel> retrievedStudents = new List<StudentDataModel>();
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string filePathGetInfoTable = databaseConnection.Connect("GetStudentsContent.sql");
             string server = databaseConnection.server2;
 
             // Data is stored in dataTable object
-            ExecuteGetStudentsContentFile(server, filePathGetInfoTable);
+            dataTable = scriptHandler.ExecuteGetRequestContentFile(server, filePathGetInfoTable);
             foreach (DataRow row in dataTable.Rows)
             {
                 StudentDataModel studentData = new StudentDataModel()
@@ -40,25 +41,18 @@ namespace WindowsService.Scripts
             return retrievedStudents;
         }
 
-        private void ExecuteGetStudentsContentFile(string connectionString, string filePath)
+        public StudentDataModel FindStudent(string ID)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            StudentDataModel studentData = new StudentDataModel();
+            List<StudentDataModel> retrievedStudents = RetrieveTableContents();
+            foreach (StudentDataModel student in retrievedStudents)
             {
-                string data = File.ReadAllText(filePath);
-
-                conn.Open();
-
-                using (SqlCommand cmd = conn.CreateCommand())
+                if (student.ID.Equals(ID))
                 {
-                    cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    //this will query your datatable and return the result to your datatable
-                    adapter.Fill(dataTable);
-                    adapter.Dispose();
+                    studentData = student;
                 }
-                conn.Close();
             }
+            return studentData;
         }
 
     }

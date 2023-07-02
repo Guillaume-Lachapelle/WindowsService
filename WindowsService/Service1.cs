@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.ServiceProcess;
 using System.Timers;
 using WindowsService.Models;
-using WindowsService.Scripts;
+using WindowsService.Helpers;
 
 namespace WindowsService
 {

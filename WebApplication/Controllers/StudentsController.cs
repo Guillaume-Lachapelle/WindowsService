@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using System.Threading.Tasks;
-using WindowsService.Scripts;
+using WindowsService.Helpers;
 
 namespace WebApplication.Controllers
 {
@@ -10,7 +10,7 @@ namespace WebApplication.Controllers
     {
         [HttpGet]
         [Route("")]
-        public async Task<IHttpActionResult> GetStudents()
+        public IHttpActionResult GetStudents()
         {
             try
             {
