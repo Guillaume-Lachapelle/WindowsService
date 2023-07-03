@@ -6,7 +6,7 @@ using WindowsService.Models;
 
 namespace WebApplication.Controllers
 {
-    [RoutePrefix("api/student/search")]
+    [RoutePrefix("api/students")]
     public class StudentSearchController : ApiController
     {
         [HttpGet]

@@ -9,6 +9,6 @@
         public string SchoolEmail { get; set; }
         public string YearOfAdmission { get; set; }
         public string Classes { get; set; }
-        public string Graduated { get; set; }
+        public bool Graduated { get; set; }
     }
 }

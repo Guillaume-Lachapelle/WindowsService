@@ -36,7 +36,7 @@ namespace WindowsService.Helpers
                     SchoolEmail = row["SchoolEmail"].ToString(),
                     YearOfAdmission = row["YearOfAdmission"].ToString(),
                     Classes = row["Classes"].ToString(),
-                    Graduated = row["Graduated"].ToString()
+                    Graduated = row["Graduated"].Equals("True")
                 };
                 retrievedStudents.Add(studentData);
             }

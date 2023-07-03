@@ -1,0 +1,1 @@
+INSERT INTO Students(ID,FirstName,LastName,Program,SchoolEmail,YearOfAdmission,Classes,Graduated) VALUES (@ID,@FirstName,@LastName,@Program,@SchoolEmail,@YearOfAdmission,@Classes,@Graduated);

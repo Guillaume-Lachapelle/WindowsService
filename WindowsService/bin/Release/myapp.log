@@ -23,3 +23,4 @@
 2023-07-01 21:52:43,201 [4] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
 2023-07-02 11:32:55,572 [4] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
 2023-07-02 14:47:09,098 [4] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-02 16:32:55,371 [4] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.

@@ -147,6 +147,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\CreateStudent.cs" />
+    <Compile Include="Helpers\FindByEmail.cs" />
     <Compile Include="Helpers\FindByID.cs" />
     <Compile Include="Helpers\ScriptHandler.cs" />
     <Compile Include="Logger.cs" />
@@ -191,10 +193,12 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Scripts\CreateDatabase.sql" />
+    <Content Include="Scripts\CreateStudent.sql" />
     <Content Include="Scripts\CreateTables.sql" />
-    <Content Include="Scripts\GetStudent.sql" />
+    <Content Include="Scripts\GetStudentByEmail.sql" />
+    <Content Include="Scripts\GetStudentByID.sql" />
     <Content Include="Scripts\GetStudentsContent.sql" />
-    <Content Include="Scripts\GetTeacher.sql" />
+    <Content Include="Scripts\GetTeacherByID.sql" />
     <Content Include="Scripts\GetTeachersContent.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

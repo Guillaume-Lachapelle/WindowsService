@@ -8,12 +8,12 @@ using WindowsService.Models;
 
 namespace WindowsService.Helpers
 {
-    public class FindByID
+    public class FindByEmail
     {
         private DataTable dataTable = new DataTable();
         private ScriptHandler scriptHandler = new ScriptHandler();
 
-        public dynamic Find<T>(string ID)
+        public dynamic Find<T>(string Email)
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string filePathGetInfoTable;
@@ -22,15 +22,15 @@ namespace WindowsService.Helpers
             switch (typeof(T))
             {
                 case Type studentType when studentType == typeof(StudentDataModel):
-                    filePathGetInfoTable = databaseConnection.Connect("GetStudentByID.sql");
+                    filePathGetInfoTable = databaseConnection.Connect("GetStudentByEmail.sql");
                     isStudent = true;
                     break;
                 default:
-                    filePathGetInfoTable = databaseConnection.Connect("GetTeacherByID.sql");
+                    filePathGetInfoTable = databaseConnection.Connect("GetTeacherByEmail.sql");
                     break;
             }
 
-            dataTable = scriptHandler.ExecuteGetRequestContentFile(databaseConnection.server2, filePathGetInfoTable, ID:ID);
+            dataTable = scriptHandler.ExecuteGetRequestContentFile(databaseConnection.server2, filePathGetInfoTable, Email:Email);
 
             if (dataTable.Rows.Count > 0)
             {
