@@ -468,3 +468,25 @@
 2023-07-02 23:36:48,011 [16] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
 2023-07-02 23:36:51,238 [11] INFO MonitoringLogger - Request successful for endpoint GET api/teacher/search/T12345678.
 2023-07-02 23:36:55,332 [10] ERROR MonitoringLogger - Request failed for endpoint POST api/students/40203327/Justin/Lachapelle. A student already exists with the requested ID 40203327.
+2023-07-02 23:39:25,507 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-02 23:39:25,516 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-02 23:39:25,782 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/students/40203327/Justin/Lachapelle. A student already exists with the requested ID 40203327.
+2023-07-02 23:39:30,229 [12] INFO MonitoringLogger - Request successful for endpoint GET api/teacher/search/T12345678.
+2023-07-02 23:39:36,470 [12] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-07-02 23:39:46,120 [11] ERROR MonitoringLogger - Request failed for endpoint POST api/students/40203327/Justin/Lachapelle. A student already exists with the requested ID 40203327.
+2023-07-02 23:40:08,305 [17] ERROR MonitoringLogger - Request failed for endpoint POST api/students/40203328/Justin/Lachapelle. A student already exists with the requested email justin2.lachapelle@university.com.
+2023-07-02 23:40:14,941 [14] ERROR MonitoringLogger - Request failed for endpoint POST api/students/40203327/Justin/Lachapelle. A student already exists with the requested ID 40203327.
+2023-07-02 23:46:48,187 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-02 23:46:48,195 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-02 23:48:15,064 [10] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 23:49:24,231 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-02 23:49:24,240 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-02 23:49:29,535 [10] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-07-02 23:50:25,708 [10] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203326.
+2023-07-02 23:50:37,680 [11] ERROR MonitoringLogger - Request failed for endpoint POST api/students/40203326/Justin/Lachapelle. A student already exists with the requested ID 40203326.
+2023-07-02 23:50:45,379 [10] ERROR MonitoringLogger - Request failed for endpoint POST api/students/40203327/Justin/Lachapelle. A student already exists with the requested email justin.lachapelle@university.com.
+2023-07-02 23:50:50,942 [9] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203327.
+2023-07-02 23:50:59,296 [9] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-07-02 23:51:09,128 [9] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
+2023-07-02 23:51:12,373 [9] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203326.
+2023-07-02 23:51:13,504 [9] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203327.

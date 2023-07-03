@@ -62,8 +62,9 @@ namespace WebApplication.Controllers
                             Logger.MonitoringLogger.Error($"Request failed for endpoint POST api/students/{ID}/{FirstName}/{LastName}. The student could not be created.");
                             return Content(System.Net.HttpStatusCode.InternalServerError, "The student could not be created.");
                         }
+                        student = info.Find<StudentDataModel>(ID);
                         Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/student/search/{ID}.");
-                        return Ok(createStudentModelBody);
+                        return Ok(student);
                     }
                     else
                     {
