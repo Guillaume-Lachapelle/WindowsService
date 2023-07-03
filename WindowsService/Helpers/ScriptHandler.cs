@@ -86,5 +86,33 @@ namespace WindowsService.Helpers
             }
         }
 
+        public void ExecuteCreateStudentFile(string connectionString, string filePath, TeacherDataModel teacherDataModel)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string data = File.ReadAllText(filePath);
+
+                conn.Open();
+
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.Parameters.Clear();
+                    // Add non-nullable elements
+                    cmd.Parameters.AddWithValue("@ID", teacherDataModel.ID);
+                    cmd.Parameters.AddWithValue("@FirstName", teacherDataModel.FirstName);
+                    cmd.Parameters.AddWithValue("@LastName", teacherDataModel.LastName);
+                    cmd.Parameters.AddWithValue("@Salary", teacherDataModel.Salary);
+                    cmd.Parameters.AddWithValue("@HiringDate", teacherDataModel.HiringDate);
+                    cmd.Parameters.AddWithValue("@SchoolEmail", teacherDataModel.SchoolEmail);
+                    // Add nullable elements and check if they are null or empty. If they are, set their value to NULL in database
+                    cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(teacherDataModel.Classes) ? SqlString.Null : teacherDataModel.Classes);
+                    cmd.Parameters.AddWithValue("@Department", string.IsNullOrEmpty(teacherDataModel.Department) ? SqlString.Null : teacherDataModel.Department);
+                    cmd.CommandText = data;
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+        }
+
     }
 }

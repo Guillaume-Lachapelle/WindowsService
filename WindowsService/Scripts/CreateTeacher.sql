@@ -1,0 +1,1 @@
+INSERT INTO Teachers(ID,FirstName,LastName,Department,Salary,HiringDate,SchoolEmail,Classes) VALUES (@ID,@FirstName,@LastName,@Department,@Salary,@HiringDate,@SchoolEmail,@Classes);

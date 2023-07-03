@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http;
 using WebApplication.Models;
+using WindowsService.Checks;
 using WindowsService.Helpers;
 using WindowsService.Models;
 
@@ -14,6 +10,19 @@ namespace WebApplication.Controllers
     [RoutePrefix("api/students")]
     public class CreateStudentController : ApiController
     {
+
+        #region Proxies
+
+        CheckID checkID = new CheckID();
+        CheckEmail checkEmail = new CheckEmail();
+        CreateStudent createStudentProxy = new CreateStudent();
+        FindByID findByIDProxy = new FindByID();
+
+        #endregion
+
+
+        #region Methods
+
         [HttpPost]
         [Route("{ID}/{FirstName}/{LastName}")]
         public IHttpActionResult Post([FromBody] CreateStudentModel createStudentModelBody, string ID, string FirstName, string LastName)
@@ -34,17 +43,20 @@ namespace WebApplication.Controllers
                     return Content(System.Net.HttpStatusCode.BadRequest, "A field that is non-nullable was not given a value in the API call. For the request to succeed, the Program, SchoolEmail, and YearOfAdmission have to be specified.");
                 }
 
-                FindByID info = new FindByID();
-                StudentDataModel student = info.Find<StudentDataModel>(ID);
-                if (string.IsNullOrEmpty(student.ID))
+                // If the ID doesn't have the right format, return bad request.
+                if (!checkID.ValidFormat<StudentDataModel>(ID))
+                {
+                    Logger.MonitoringLogger.Error("Request failed for endpoint POST api/students/{ID}/{FirstName}/{LastName}. The ID was not in the right format. The ID needs to be a string of 8 numbers.");
+                    return Content(System.Net.HttpStatusCode.BadRequest, "The ID was not in the right format. The ID needs to be a string of 8 numbers.");
+                }
+
+                if (checkID.CanCreate<StudentDataModel>(ID))
                 {
 
-                    FindByEmail emailInfo = new FindByEmail();
-                    StudentDataModel studentEmailModel = emailInfo.Find<StudentDataModel>(createStudentModelBody.SchoolEmail);
-                    if (string.IsNullOrEmpty(studentEmailModel.SchoolEmail))
+                    if (checkEmail.Check(createStudentModelBody.SchoolEmail))
                     {
                         bool Graduated = false;
-                        student = new StudentDataModel()
+                        StudentDataModel student = new StudentDataModel()
                         {
                             ID = ID,
                             FirstName = FirstName,
@@ -55,21 +67,22 @@ namespace WebApplication.Controllers
                             Classes = createStudentModelBody.Classes,
                             Graduated = Graduated
                         };
-                        CreateStudent createStudentProxy = new CreateStudent();
+                        
                         bool success = createStudentProxy.Create(student);
                         if (!success)
                         {
                             Logger.MonitoringLogger.Error($"Request failed for endpoint POST api/students/{ID}/{FirstName}/{LastName}. The student could not be created.");
                             return Content(System.Net.HttpStatusCode.InternalServerError, "The student could not be created.");
                         }
-                        student = info.Find<StudentDataModel>(ID);
-                        Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/student/search/{ID}.");
+                        
+                        student = findByIDProxy.Find<StudentDataModel>(ID);
+                        Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/student/{ID}/{FirstName}/{LastName}.");
                         return Ok(student);
                     }
                     else
                     {
-                        Logger.MonitoringLogger.Error($"Request failed for endpoint POST api/students/{ID}/{FirstName}/{LastName}. A student already exists with the requested email {createStudentModelBody.SchoolEmail}.");
-                        return Content(System.Net.HttpStatusCode.NotFound, $"A student already exists with the requested email {createStudentModelBody.SchoolEmail}.");
+                        Logger.MonitoringLogger.Error($"Request failed for endpoint POST api/students/{ID}/{FirstName}/{LastName}. The requested email {createStudentModelBody.SchoolEmail} already exists or does not have a valid format @university.com.");
+                        return Content(System.Net.HttpStatusCode.NotFound, $"The requested email {createStudentModelBody.SchoolEmail} already exists or does not have a valid format @university.com.");
                     }
                 }
                 else
@@ -84,5 +97,7 @@ namespace WebApplication.Controllers
                 return Content(System.Net.HttpStatusCode.Conflict, e);
             }
         }
+
+        #endregion
     }
 }

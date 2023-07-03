@@ -490,3 +490,48 @@
 2023-07-02 23:51:09,128 [9] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203325.
 2023-07-02 23:51:12,373 [9] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203326.
 2023-07-02 23:51:13,504 [9] INFO MonitoringLogger - Request successful for endpoint GET api/student/search/40203327.
+2023-07-03 14:56:45,279 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 14:56:45,287 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 14:57:08,767 [5] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/{ID}/{FirstName}/{LastName}. The ID was not in the right format. The ID needs to be start with 'T' followed by 8 numbers.
+2023-07-03 14:57:21,711 [5] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/{ID}/{FirstName}/{LastName}. The ID was not in the right format. The ID needs to be start with 'T' followed by 8 numbers.
+2023-07-03 14:57:27,147 [5] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T12345678/Jacques/Bruneau. A teacher already exists with the requested ID T12345678.
+2023-07-03 14:57:36,912 [5] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/{ID}/{FirstName}/{LastName}. A field that is non-nullable was not given a value in the API call. For the request to succeed, the Salary, HiringDate, and SchoolEmail have to be specified.
+2023-07-03 14:58:33,029 [5] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T12345678/Jacques/Bruneau. A teacher already exists with the requested ID T12345678.
+2023-07-03 14:58:49,963 [5] ERROR MonitoringLogger - Could not find file 'C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\Scripts\GetTeacherByEmail.sql'.
+2023-07-03 15:00:50,101 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 15:00:50,110 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 15:01:44,529 [11] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T24681012/Jacques/Bruneau.
+2023-07-03 15:01:51,495 [10] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 15:38:38,518 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 15:38:38,527 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 15:40:54,719 [7] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T24681012/Jacques/Bruneau. The requested email jacques.bruneau@university.com already exists.
+2023-07-03 15:42:07,406 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T24681012/Jacques/Bruneau. The requested email jacques.bruneau@university.com already exists.
+2023-07-03 15:43:16,509 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 15:43:16,518 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 15:43:44,616 [19] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T24681012/Jacques/Bruneau. The requested email jacques.bruneau@university.com already exists.
+2023-07-03 15:44:00,247 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 15:44:00,255 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 15:44:11,655 [11] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T24681012/Jacques/Bruneau. The requested email jacques.bruneau@university.com already exists.
+2023-07-03 15:45:27,979 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/{ID}/{FirstName}/{LastName}. The ID was not in the right format. The ID needs to be start with 'T' followed by 8 numbers.
+2023-07-03 15:45:34,620 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T24681012/Jacques/Bruneau. The requested email jacques.bruneau@university.com already exists.
+2023-07-03 15:47:54,320 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T24681012/Jacques/Bruneau.
+2023-07-03 15:48:02,096 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 15:49:03,324 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teacher/search/T24681012.
+2023-07-03 15:51:21,160 [59] ERROR MonitoringLogger - Request failed for endpoint POST api/students/30203325/Guillaume/Lachapelle. A student already exists with the requested ID 30203325.
+2023-07-03 15:54:14,442 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 15:54:14,452 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 15:54:17,779 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T24681012/Jacques/Bruneau. A teacher already exists with the requested ID T24681012.
+2023-07-03 15:54:43,716 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T87654321/Jacques/Bruneau. The requested email jacques.bruneau@university.com already exists.
+2023-07-03 15:54:48,871 [10] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 15:55:00,528 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T87654321/Jacques/Bruneau. The requested email jacques2.bruneau@universiti.com already exists.
+2023-07-03 15:56:35,759 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 15:56:35,769 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 15:56:38,671 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T87654321/Jacques/Bruneau. The requested email jacques2.bruneau@universiti.com already exists or does not have a valid format @university.com.
+2023-07-03 15:56:48,042 [11] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T87654321/Jacques/Bruneau.
+2023-07-03 15:56:53,748 [10] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 16:05:17,635 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 16:05:17,644 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 16:06:00,339 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T55555555/Jacques/Bruneau.
+2023-07-03 16:06:33,445 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T55555555/Jacques/Bruneau. The teacher could not be created.
+2023-07-03 16:07:00,443 [6] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 16:07:22,526 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T55555555/Jacques/Bruneau. The teacher could not be created.

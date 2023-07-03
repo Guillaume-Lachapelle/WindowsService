@@ -147,7 +147,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checks\CheckEmail.cs" />
+    <Compile Include="Checks\CheckID.cs" />
     <Compile Include="Helpers\CreateStudent.cs" />
+    <Compile Include="Helpers\CreateTeacher.cs" />
     <Compile Include="Helpers\FindByEmail.cs" />
     <Compile Include="Helpers\FindByID.cs" />
     <Compile Include="Helpers\ScriptHandler.cs" />
@@ -195,9 +198,11 @@
     <Content Include="Scripts\CreateDatabase.sql" />
     <Content Include="Scripts\CreateStudent.sql" />
     <Content Include="Scripts\CreateTables.sql" />
+    <Content Include="Scripts\CreateTeacher.sql" />
     <Content Include="Scripts\GetStudentByEmail.sql" />
     <Content Include="Scripts\GetStudentByID.sql" />
     <Content Include="Scripts\GetStudentsContent.sql" />
+    <Content Include="Scripts\GetTeacherByEmail.sql" />
     <Content Include="Scripts\GetTeacherByID.sql" />
     <Content Include="Scripts\GetTeachersContent.sql" />
   </ItemGroup>
