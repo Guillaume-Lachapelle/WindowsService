@@ -486,3 +486,24 @@ Affected parameters are:
    logtoconsole = 
    logfile = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.InstallLog
    assemblypath = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.exe
+Uninstalling assembly 'C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.InstallLog
+   assemblypath = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.exe
+Removing EventLog source SchoolManagement.
+Service SchoolManagement is being removed from the system...
+Service SchoolManagement was successfully removed from the system.
+Installing assembly 'C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.InstallLog
+   assemblypath = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.exe
+Installing service SchoolManagement...
+Service SchoolManagement has been successfully installed.
+Creating EventLog source SchoolManagement in log Application...
+Committing assembly 'C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.InstallLog
+   assemblypath = C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WindowsService\bin\Release\WindowsService.exe

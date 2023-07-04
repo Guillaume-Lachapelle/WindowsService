@@ -535,3 +535,31 @@
 2023-07-03 16:06:33,445 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T55555555/Jacques/Bruneau. The teacher could not be created.
 2023-07-03 16:07:00,443 [6] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
 2023-07-03 16:07:22,526 [9] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T55555555/Jacques/Bruneau. The teacher could not be created.
+2023-07-03 16:09:53,746 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 16:09:53,754 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 16:09:53,936 [10] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-07-03 16:12:36,446 [26] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 22:48:27,193 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 22:48:27,203 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 22:48:27,741 [10] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T87654321/Jacques/Bruneau. A teacher already exists with the requested ID T87654321.
+2023-07-03 22:48:50,147 [14] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/T00000000/Jacques/Bruneau. The requested email jacques2.bruneau@university.com already exists or does not have a valid format @university.com.
+2023-07-03 22:48:58,818 [20] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T00000000/Jacques/Bruneau.
+2023-07-03 22:49:34,855 [24] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 22:50:26,944 [13] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-07-03 22:50:49,430 [23] INFO MonitoringLogger - Request successful for endpoint GET api/student/40203328/Justin/Lachapelle.
+2023-07-03 22:50:54,241 [23] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-07-03 22:55:19,048 [14] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 22:55:19,056 [14] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 22:55:37,176 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 22:55:37,184 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 22:55:52,332 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 22:56:41,987 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 22:56:41,995 [1] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 22:56:45,081 [6] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 22:57:52,877 [6] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T12345678/Justin/Trudeau.
+2023-07-03 22:58:48,376 [5] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T24681012/Jacques/Bruneau.
+2023-07-03 22:59:05,874 [5] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T87654321/Jacques/Bruneau.
+2023-07-03 22:59:17,266 [5] ERROR MonitoringLogger - Request failed for endpoint POST api/teachers/{ID}/{FirstName}/{LastName}. The ID was not in the right format. The ID needs to be start with 'T' followed by 8 numbers.
+2023-07-03 22:59:20,770 [7] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T00000000/Jacques/Bruneau.
+2023-07-03 22:59:48,253 [5] INFO MonitoringLogger - Request successful for endpoint GET api/students
+2023-07-03 23:00:00,335 [6] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
