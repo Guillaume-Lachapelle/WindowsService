@@ -563,38 +563,8 @@
 2023-07-03 22:59:20,770 [7] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T00000000/Jacques/Bruneau.
 2023-07-03 22:59:48,253 [5] INFO MonitoringLogger - Request successful for endpoint GET api/students
 2023-07-03 23:00:00,335 [6] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
-2023-07-03 23:40:22,924 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-07-03 23:40:22,947 [1] INFO MonitoringLogger - Web app finished connecting
-2023-07-03 23:40:33,187 [10] INFO MonitoringLogger - Request successful for endpoint GET api/students
-2023-07-03 23:40:43,730 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
-2023-07-03 23:41:32,350 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T12345678/Justin/Trudeau.
-2023-07-03 23:41:38,230 [9] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
-2023-07-03 23:44:18,096 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-07-03 23:44:18,110 [1] INFO MonitoringLogger - Web app finished connecting
-2023-07-03 23:44:18,763 [8] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
-2023-07-03 23:54:44,663 [59] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-07-03 23:54:44,679 [59] INFO MonitoringLogger - Web app finished connecting
-2023-07-03 23:54:45,075 [58] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
-2023-07-03 23:54:49,762 [60] INFO MonitoringLogger - Request successful for endpoint GET api/students
-2023-07-03 23:55:04,773 [63] INFO MonitoringLogger - Request successful for endpoint GET api/teachers/T00000000/Jacques/Bruneau.
-2023-07-03 23:55:15,243 [44] INFO MonitoringLogger - Request successful for endpoint GET api/student/40203327/Justin/Lachapelle.
-2023-07-03 23:55:19,140 [51] INFO MonitoringLogger - Request successful for endpoint GET api/students
-2023-07-03 23:55:21,725 [67] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
-2023-08-22 18:40:21,341 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-08-22 18:40:21,530 [1] INFO MonitoringLogger - Web app finished connecting
-2023-08-22 18:42:14,585 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-08-22 18:42:14,593 [1] INFO MonitoringLogger - Web app finished connecting
-2023-08-22 19:08:11,159 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-08-22 19:08:11,169 [1] INFO MonitoringLogger - Web app finished connecting
-2023-08-22 19:09:04,865 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-08-22 19:09:04,874 [1] INFO MonitoringLogger - Web app finished connecting
-2023-08-22 19:09:34,882 [9] INFO MonitoringLogger - Request successful for endpoint DELETE api/students/40203328
-2023-08-22 19:12:06,803 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-08-22 19:12:06,812 [1] INFO MonitoringLogger - Web app finished connecting
-2023-08-22 19:13:24,035 [10] ERROR MonitoringLogger - Request failed for endpoint DELETE api/students/40203328. No student found with the requested ID 40203328.
-2023-08-22 19:13:49,849 [12] ERROR MonitoringLogger - Request failed for endpoint DELETE api/students/40203328. No student found with the requested ID 40203328.
-2023-08-22 19:13:53,235 [9] ERROR MonitoringLogger - Request failed for endpoint DELETE api/students/40203328. No student found with the requested ID 40203328.
-2023-08-22 21:10:18,442 [1] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
-2023-08-22 21:10:18,547 [1] INFO MonitoringLogger - Web app finished connecting
-2023-08-22 21:10:18,819 [9] INFO MonitoringLogger - Request successful for endpoint GET api/students
-2023-08-22 21:10:26,628 [10] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 23:02:12,156 [14] INFO MonitoringLogger - Connection to SQL database successful. If SchoolManagement database or Teachers table or Students table did not exist, they were created successfully.
+2023-07-03 23:02:12,164 [14] INFO MonitoringLogger - Web app finished connecting
+2023-07-03 23:02:12,280 [55] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 23:02:21,347 [60] INFO MonitoringLogger - Request successful for endpoint GET api/teachers
+2023-07-03 23:02:25,156 [58] INFO MonitoringLogger - Request successful for endpoint GET api/teachers

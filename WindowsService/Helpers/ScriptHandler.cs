@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WindowsService.Models;
 
 namespace WindowsService.Helpers
@@ -86,7 +81,7 @@ namespace WindowsService.Helpers
             }
         }
 
-        public void ExecuteCreateStudentFile(string connectionString, string filePath, TeacherDataModel teacherDataModel)
+        public void ExecuteCreateTeacherFile(string connectionString, string filePath, TeacherDataModel teacherDataModel)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -107,6 +102,25 @@ namespace WindowsService.Helpers
                     // Add nullable elements and check if they are null or empty. If they are, set their value to NULL in database
                     cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(teacherDataModel.Classes) ? SqlString.Null : teacherDataModel.Classes);
                     cmd.Parameters.AddWithValue("@Department", string.IsNullOrEmpty(teacherDataModel.Department) ? SqlString.Null : teacherDataModel.Department);
+                    cmd.CommandText = data;
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+        }
+
+        public void ExecuteDeleteStudentFile(string connectionString, string filePath, string ID)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string data = File.ReadAllText(filePath);
+
+                conn.Open();
+
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@ID", ID);
                     cmd.CommandText = data;
                     cmd.ExecuteNonQuery();
                 }

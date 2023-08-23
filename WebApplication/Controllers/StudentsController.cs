@@ -30,7 +30,7 @@ namespace WebApplication.Controllers
             catch (Exception e)
             {
                 Logger.MonitoringLogger.Error(e.Message);
-                return Content(System.Net.HttpStatusCode.ServiceUnavailable, e);
+                return Content(System.Net.HttpStatusCode.InternalServerError, e);
             }
         }
     }

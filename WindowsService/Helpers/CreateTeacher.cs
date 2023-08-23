@@ -18,7 +18,7 @@ namespace WindowsService.Helpers
 
             try
             {
-                scriptHandler.ExecuteCreateStudentFile(databaseConnection.server2, filePathGetInfoTable, teacherDataModel);
+                scriptHandler.ExecuteCreateTeacherFile(databaseConnection.server2, filePathGetInfoTable, teacherDataModel);
                 return true;
             }
             catch (Exception)

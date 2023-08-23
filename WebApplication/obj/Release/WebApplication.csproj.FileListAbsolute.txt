@@ -1,135 +1,135 @@
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\log4net.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WebApplication.dll.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WebApplication.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WebApplication.pdb
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\csc.exe
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\csc.exe.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\csc.rsp
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\csi.exe
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\csi.exe.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\csi.rsp
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Buffers.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Memory.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Numerics.Vectors.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\vbc.exe
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\vbc.exe.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\vbc.rsp
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\VBCSCompiler.exe
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Antlr3.Runtime.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Autofac.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Autofac.Integration.WebApi.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Fix.AppBuilder.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Fix.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\LightInject.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\log4net.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Extensions.Primitives.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Net.Http.Headers.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.OpenApi.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Diagnostics.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.HttpListener.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Hosting.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Security.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Newtonsoft.Json.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Owin.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Swashbuckle.Core.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Buffers.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Diagnostics.DiagnosticSource.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Diagnostics.EventLog.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Diagnostics.PerformanceCounter.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Memory.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Net.Http.Extensions.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Net.Http.Formatting.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Net.Http.Primitives.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Numerics.Vectors.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Security.AccessControl.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Security.Permissions.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Security.Principal.Windows.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.Core.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.ServiceController.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.ValueTuple.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Helpers.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.Owin.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.SelfHost.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.WebHost.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Topshelf.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WebActivatorEx.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WindowsService.exe
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Antlr3.Runtime.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Autofac.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Autofac.Integration.WebApi.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Fix.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\LightInject.pdb
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\LightInject.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.pdb
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.dll.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\log4net.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Extensions.Primitives.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Net.Http.Headers.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.OpenApi.pdb
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.OpenApi.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Diagnostics.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.HttpListener.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Hosting.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Security.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Newtonsoft.Json.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Buffers.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Diagnostics.DiagnosticSource.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Diagnostics.EventLog.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Diagnostics.PerformanceCounter.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Memory.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Net.Http.Extensions.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Net.Http.Formatting.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Net.Http.Primitives.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Numerics.Vectors.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Security.AccessControl.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Security.Permissions.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Security.Principal.Windows.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.Core.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.ServiceController.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.ValueTuple.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.Owin.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.SelfHost.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\System.Web.Http.WebHost.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\Topshelf.xml
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WindowsService.pdb
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\bin\WindowsService.exe.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.App.config
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.AssemblyReference.cache
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.CoreCompileInputs.cache
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.CopyComplete
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Release\WebApplication.dll
-C:\Users\guill\OneDrive - Concordia University - Canada\Other\Projects\WindowsService\WebApplication\obj\Release\WebApplication.pdb
+E:\Projects\WindowsService\WebApplication\bin\log4net.config
+E:\Projects\WindowsService\WebApplication\bin\WebApplication.dll.config
+E:\Projects\WindowsService\WebApplication\bin\WebApplication.dll
+E:\Projects\WindowsService\WebApplication\bin\WebApplication.pdb
+E:\Projects\WindowsService\WebApplication\bin\roslyn\csc.exe
+E:\Projects\WindowsService\WebApplication\bin\roslyn\csc.exe.config
+E:\Projects\WindowsService\WebApplication\bin\roslyn\csc.rsp
+E:\Projects\WindowsService\WebApplication\bin\roslyn\csi.exe
+E:\Projects\WindowsService\WebApplication\bin\roslyn\csi.exe.config
+E:\Projects\WindowsService\WebApplication\bin\roslyn\csi.rsp
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Projects\WindowsService\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Buffers.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Memory.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Numerics.Vectors.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Projects\WindowsService\WebApplication\bin\roslyn\vbc.exe
+E:\Projects\WindowsService\WebApplication\bin\roslyn\vbc.exe.config
+E:\Projects\WindowsService\WebApplication\bin\roslyn\vbc.rsp
+E:\Projects\WindowsService\WebApplication\bin\roslyn\VBCSCompiler.exe
+E:\Projects\WindowsService\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\WindowsService\WebApplication\bin\Antlr3.Runtime.dll
+E:\Projects\WindowsService\WebApplication\bin\Autofac.dll
+E:\Projects\WindowsService\WebApplication\bin\Autofac.Integration.WebApi.dll
+E:\Projects\WindowsService\WebApplication\bin\Fix.AppBuilder.dll
+E:\Projects\WindowsService\WebApplication\bin\Fix.dll
+E:\Projects\WindowsService\WebApplication\bin\LightInject.dll
+E:\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.dll
+E:\Projects\WindowsService\WebApplication\bin\log4net.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Extensions.Primitives.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Net.Http.Headers.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.OpenApi.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Diagnostics.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.HttpListener.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Hosting.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Security.dll
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\WindowsService\WebApplication\bin\Newtonsoft.Json.dll
+E:\Projects\WindowsService\WebApplication\bin\Owin.dll
+E:\Projects\WindowsService\WebApplication\bin\Swashbuckle.Core.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Buffers.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Diagnostics.EventLog.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Diagnostics.PerformanceCounter.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Memory.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Net.Http.Extensions.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Net.Http.Formatting.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Net.Http.Primitives.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Numerics.Vectors.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Security.AccessControl.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Security.Permissions.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Security.Principal.Windows.dll
+E:\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.Core.dll
+E:\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.ServiceController.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Threading.Tasks.Extensions.dll
+E:\Projects\WindowsService\WebApplication\bin\System.ValueTuple.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Helpers.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.Owin.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.SelfHost.dll
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.WebHost.dll
+E:\Projects\WindowsService\WebApplication\bin\Topshelf.dll
+E:\Projects\WindowsService\WebApplication\bin\WebActivatorEx.dll
+E:\Projects\WindowsService\WebApplication\bin\WindowsService.exe
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Projects\WindowsService\WebApplication\bin\Antlr3.Runtime.xml
+E:\Projects\WindowsService\WebApplication\bin\Autofac.xml
+E:\Projects\WindowsService\WebApplication\bin\Autofac.Integration.WebApi.xml
+E:\Projects\WindowsService\WebApplication\bin\Fix.xml
+E:\Projects\WindowsService\WebApplication\bin\LightInject.pdb
+E:\Projects\WindowsService\WebApplication\bin\LightInject.xml
+E:\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.pdb
+E:\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.xml
+E:\Projects\WindowsService\WebApplication\bin\LightInject.WebApi.dll.config
+E:\Projects\WindowsService\WebApplication\bin\log4net.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Extensions.Primitives.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Net.Http.Headers.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.OpenApi.pdb
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.OpenApi.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Diagnostics.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.HttpListener.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Hosting.xml
+E:\Projects\WindowsService\WebApplication\bin\Microsoft.Owin.Security.xml
+E:\Projects\WindowsService\WebApplication\bin\Newtonsoft.Json.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Buffers.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Diagnostics.EventLog.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Diagnostics.PerformanceCounter.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Memory.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Net.Http.Extensions.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Net.Http.Formatting.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Net.Http.Primitives.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Numerics.Vectors.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Security.AccessControl.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Security.Permissions.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Security.Principal.Windows.xml
+E:\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.Core.xml
+E:\Projects\WindowsService\WebApplication\bin\System.ServiceProcess.ServiceController.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Threading.Tasks.Extensions.xml
+E:\Projects\WindowsService\WebApplication\bin\System.ValueTuple.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.Owin.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.SelfHost.xml
+E:\Projects\WindowsService\WebApplication\bin\System.Web.Http.WebHost.xml
+E:\Projects\WindowsService\WebApplication\bin\Topshelf.xml
+E:\Projects\WindowsService\WebApplication\bin\WindowsService.pdb
+E:\Projects\WindowsService\WebApplication\bin\WindowsService.exe.config
+E:\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.App.config
+E:\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.AssemblyReference.cache
+E:\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.CoreCompileInputs.cache
+E:\Projects\WindowsService\WebApplication\obj\Release\WebApplication.csproj.CopyComplete
+E:\Projects\WindowsService\WebApplication\obj\Release\WebApplication.dll
+E:\Projects\WindowsService\WebApplication\obj\Release\WebApplication.pdb
