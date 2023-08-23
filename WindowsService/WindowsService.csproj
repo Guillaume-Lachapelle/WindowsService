@@ -151,6 +151,7 @@
     <Compile Include="Checks\CheckID.cs" />
     <Compile Include="Helpers\CreateStudent.cs" />
     <Compile Include="Helpers\CreateTeacher.cs" />
+    <Compile Include="Helpers\DeleteTeacher.cs" />
     <Compile Include="Helpers\DeleteStudent.cs" />
     <Compile Include="Helpers\FindByEmail.cs" />
     <Compile Include="Helpers\FindByID.cs" />
@@ -200,6 +201,7 @@
     <Content Include="Scripts\CreateStudent.sql" />
     <Content Include="Scripts\CreateTables.sql" />
     <Content Include="Scripts\CreateTeacher.sql" />
+    <Content Include="Scripts\DeleteTeacher.sql" />
     <Content Include="Scripts\DeleteStudent.sql" />
     <Content Include="Scripts\GetStudentByEmail.sql" />
     <Content Include="Scripts\GetStudentByID.sql" />

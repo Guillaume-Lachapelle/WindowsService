@@ -241,6 +241,7 @@
     <Compile Include="App_Start\WebApplicationConfig.cs" />
     <Compile Include="Controllers\CreateTeacherController.cs" />
     <Compile Include="Controllers\CreateStudentController.cs" />
+    <Compile Include="Controllers\DeleteTeacherController.cs" />
     <Compile Include="Controllers\DeleteStudentController.cs" />
     <Compile Include="Controllers\StudentSearchController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />

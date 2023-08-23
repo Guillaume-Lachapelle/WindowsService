@@ -2,14 +2,14 @@
 
 namespace WindowsService.Helpers
 {
-    public class DeleteStudent
+    public class DeleteTeacher
     {
         private ScriptHandler scriptHandler = new ScriptHandler();
 
         public bool Delete(string ID)
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
-            string filePathGetInfoTable = databaseConnection.Connect("DeleteStudent.sql");
+            string filePathGetInfoTable = databaseConnection.Connect("DeleteTeacher.sql");
 
             try
             {

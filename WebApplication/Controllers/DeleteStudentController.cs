@@ -11,7 +11,7 @@ namespace WebApplication.Controllers
     {
         [HttpDelete]
         [Route("{ID}/delete")]
-        public IHttpActionResult DeleteStudent(string ID)
+        public IHttpActionResult Delete(string ID)
         {
             try
             {

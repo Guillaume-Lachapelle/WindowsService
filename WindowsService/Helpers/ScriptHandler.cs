@@ -109,7 +109,7 @@ namespace WindowsService.Helpers
             }
         }
 
-        public void ExecuteDeleteStudentFile(string connectionString, string filePath, string ID)
+        public void ExecuteDelete(string connectionString, string filePath, string ID)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
