@@ -45,7 +45,7 @@ namespace WindowsService.Helpers
                         SchoolEmail = dataTable.Rows[0]["SchoolEmail"].ToString(),
                         YearOfAdmission = dataTable.Rows[0]["YearOfAdmission"].ToString(),
                         Classes = dataTable.Rows[0]["Classes"].ToString(),
-                        Graduated = dataTable.Rows[0]["Graduated"].Equals("True")
+                        Graduated = Convert.ToBoolean(dataTable.Rows[0]["Graduated"])
                     };
                     return studentData;
                 }

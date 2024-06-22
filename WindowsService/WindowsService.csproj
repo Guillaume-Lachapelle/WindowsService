@@ -153,6 +153,7 @@
     <Compile Include="Helpers\CreateTeacher.cs" />
     <Compile Include="Helpers\DeleteTeacher.cs" />
     <Compile Include="Helpers\DeleteStudent.cs" />
+    <Compile Include="Helpers\EditStudent.cs" />
     <Compile Include="Helpers\FindByEmail.cs" />
     <Compile Include="Helpers\FindByID.cs" />
     <Compile Include="Helpers\ScriptHandler.cs" />
@@ -203,6 +204,7 @@
     <Content Include="Scripts\CreateTeacher.sql" />
     <Content Include="Scripts\DeleteTeacher.sql" />
     <Content Include="Scripts\DeleteStudent.sql" />
+    <Content Include="Scripts\EditStudent.sql" />
     <Content Include="Scripts\GetStudentByEmail.sql" />
     <Content Include="Scripts\GetStudentByID.sql" />
     <Content Include="Scripts\GetStudentsContent.sql" />

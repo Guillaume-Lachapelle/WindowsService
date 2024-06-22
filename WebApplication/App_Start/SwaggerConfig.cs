@@ -15,9 +15,14 @@ namespace WebApplication
 
             GlobalConfiguration.Configuration.EnableSwagger(c =>
             {
-                c.SingleApiVersion("v1", "WebApplication");
+                c.SingleApiVersion("v1", "WebApplicationAPI");
                 c.IncludeXmlComments(GetXmlCommentsPath());
-            }).EnableSwaggerUi(c => { });
+                c.UseFullTypeNameInSchemaIds();
+                c.DescribeAllEnumsAsStrings();
+            }).EnableSwaggerUi(c => { 
+                c.DocumentTitle("WebApplicationDocumentation");
+                c.EnableDiscoveryUrlSelector();
+            });
         }
         private static string GetXmlCommentsPath()
         {
