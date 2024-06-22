@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace WindowsService.Helpers
 {
-    public class RetrieveTeachersTable
+    public class RetrieveTeachers
     {
         private DataTable dataTable = new DataTable();
         private ScriptHandler scriptHandler = new ScriptHandler();

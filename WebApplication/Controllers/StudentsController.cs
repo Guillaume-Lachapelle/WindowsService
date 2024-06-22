@@ -73,12 +73,12 @@ namespace WebApplication.Controllers
                 StudentDataModel student = findByIDProxy.Find<StudentDataModel>(ID);
                 if (student.ID != null && student.ID != "")
                 {
-                    Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/student/search/{ID}.");
+                    Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/students/search/{ID}.");
                     return Ok(student);
                 }
                 else
                 {
-                    Logger.MonitoringLogger.Error($"Request failed for endpoint GET api/student/search/{ID}. No student found with the requested ID {ID}.");
+                    Logger.MonitoringLogger.Error($"Request failed for endpoint GET api/students/search/{ID}. No student found with the requested ID {ID}.");
                     return Content(System.Net.HttpStatusCode.NotFound, $"No student found with the requested ID {ID}.");
                 }
             }
@@ -150,8 +150,8 @@ namespace WebApplication.Controllers
                         }
 
                         student = findByIDProxy.Find<StudentDataModel>(ID);
-                        Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/student/{ID}/{FirstName}/{LastName}.");
-                        return Created($"api/student/{ID}/{FirstName}/{LastName}", student);
+                        Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/students/{ID}/{FirstName}/{LastName}.");
+                        return Created($"api/students/{ID}/{FirstName}/{LastName}", student);
                     }
                     else
                     {
@@ -188,7 +188,7 @@ namespace WebApplication.Controllers
                 var student = findByIDProxy.Find<StudentDataModel>(ID);
                 if (student.ID == null || student.ID == "")
                 {
-                    Logger.MonitoringLogger.Error($"Request failed for endpoint PUT api/student/{ID}. No student found with the requested ID {ID}.");
+                    Logger.MonitoringLogger.Error($"Request failed for endpoint PUT api/students/{ID}. No student found with the requested ID {ID}.");
                     return Content(System.Net.HttpStatusCode.NotFound, $"No student found with the requested ID {ID}.");
                 }
 
@@ -207,12 +207,12 @@ namespace WebApplication.Controllers
                 var inst = editStudentProxy.Edit(ID, studentDataModel);
                 if (inst)
                 {
-                    Logger.MonitoringLogger.Info($"Request successful for endpoint PUT api/student/{ID}");
-                    return Created($"api/student/{ID}", studentDataModel);
+                    Logger.MonitoringLogger.Info($"Request successful for endpoint PUT api/students/{ID}");
+                    return Created($"api/students/{ID}", studentDataModel);
                 }
                 else
                 {
-                    Logger.MonitoringLogger.Error($"Request failed for endpoint PUT api/student/{ID}");
+                    Logger.MonitoringLogger.Error($"Request failed for endpoint PUT api/students/{ID}");
                     return Content(System.Net.HttpStatusCode.InternalServerError, "The student could not be updated.");
                 }
             }

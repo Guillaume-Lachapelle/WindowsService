@@ -48,7 +48,7 @@ namespace WindowsService
             DatabaseHandler handler = new DatabaseHandler();
 
             // SQL retrieve data from Teachers table
-            RetrieveTeachersTable teachersTable = new RetrieveTeachersTable();
+            RetrieveTeachers teachersTable = new RetrieveTeachers();
             List<TeacherDataModel> teachers = teachersTable.RetrieveTableContents();
 
             // SQL retrieve data from Students table
