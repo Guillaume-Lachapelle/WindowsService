@@ -157,6 +157,7 @@
     <Compile Include="Helpers\EditTeacher.cs" />
     <Compile Include="Helpers\FindByEmail.cs" />
     <Compile Include="Helpers\FindByID.cs" />
+    <Compile Include="Helpers\RetrieveTable.cs" />
     <Compile Include="Helpers\ScriptHandler.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Models\StudentDataModel.cs" />
@@ -169,8 +170,6 @@
     </Compile>
     <Compile Include="Helpers\DatabaseConnection.cs" />
     <Compile Include="Helpers\DatabaseHandler.cs" />
-    <Compile Include="Helpers\RetrieveStudentsTable.cs" />
-    <Compile Include="Helpers\RetrieveTeachersTable.cs" />
     <Compile Include="Service1.cs">
       <SubType>Component</SubType>
     </Compile>

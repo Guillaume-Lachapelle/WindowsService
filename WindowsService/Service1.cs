@@ -47,13 +47,10 @@ namespace WindowsService
             // SQL database handling
             DatabaseHandler handler = new DatabaseHandler();
 
-            // SQL retrieve data from Teachers table
-            RetrieveTeachers teachersTable = new RetrieveTeachers();
-            List<TeacherDataModel> teachers = teachersTable.RetrieveTableContents();
-
-            // SQL retrieve data from Students table
-            RetrieveStudents studentsTable = new RetrieveStudents();
-            List<StudentDataModel> students = studentsTable.RetrieveTableContents();
+            // SQL retrieve data from Teachers and Students table
+/*            RetrieveTable retrieveTable = new RetrieveTable();
+            List<TeacherDataModel> teachers = retrieveTable.RetrieveTableContents<TeacherDataModel>();
+            List<StudentDataModel> students = retrieveTable.RetrieveTableContents<StudentDataModel>();*/
 
             /*foreach(var teacher in teachers)
             {

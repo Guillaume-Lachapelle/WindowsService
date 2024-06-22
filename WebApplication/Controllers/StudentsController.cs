@@ -21,7 +21,7 @@ namespace WebApplication.Controllers
         private readonly CheckID checkID = new CheckID();
         private readonly CheckEmail checkEmail = new CheckEmail();
         private readonly CreateStudent createStudentProxy = new CreateStudent();
-        private readonly RetrieveStudents retrieveStudentsProxy = new RetrieveStudents();
+        private readonly RetrieveTable retrieveTableProxy = new RetrieveTable();
         private readonly DeleteStudent deleteStudentProxy = new DeleteStudent();
         private readonly EditStudent editStudentProxy = new EditStudent();
         private readonly FindByID findByIDProxy = new FindByID();
@@ -40,7 +40,7 @@ namespace WebApplication.Controllers
         {
             try
             {
-                var inst = retrieveStudentsProxy.RetrieveTableContents();
+                var inst = retrieveTableProxy.RetrieveTableContents<StudentDataModel>();
                 if (inst.Count != 0)
                 {
                     Logger.MonitoringLogger.Info("Request successful for endpoint GET api/students");

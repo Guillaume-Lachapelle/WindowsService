@@ -16,7 +16,7 @@ namespace WebApplication.Controllers
 
         CheckID checkID = new CheckID();
         CheckEmail checkEmail = new CheckEmail();
-        RetrieveTeachers retrieveTeachersProxy = new RetrieveTeachers();
+        RetrieveTable retrieveTableProxy = new RetrieveTable();
         CreateTeacher createTeacherProxy = new CreateTeacher();
         DeleteTeacher deleteTeacherProxy = new DeleteTeacher();
         EditTeacher editTeacherProxy = new EditTeacher();
@@ -37,7 +37,7 @@ namespace WebApplication.Controllers
         {
             try
             {
-                var inst = retrieveTeachersProxy.RetrieveTableContents();
+                var inst = retrieveTableProxy.RetrieveTableContents<TeacherDataModel>();
                 if (inst.Count != 0)
                 {
                     Logger.MonitoringLogger.Info("Request successful for endpoint GET api/teachers");
