@@ -1,1 +1,7 @@
 /DatabaseOrganization.docx
+**/WebApplication/bin/
+**/bin/
+**/obj/
+**/*.log
+**/.vs/
+WebApplication/myapp.log
