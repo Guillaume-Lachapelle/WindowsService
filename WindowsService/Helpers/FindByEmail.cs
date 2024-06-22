@@ -17,24 +17,24 @@ namespace WindowsService.Helpers
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string filePathGetInfoTable;
-            bool isStudent = false;
 
             switch (typeof(T))
             {
                 case Type studentType when studentType == typeof(StudentDataModel):
                     filePathGetInfoTable = databaseConnection.Connect("GetStudentByEmail.sql");
-                    isStudent = true;
                     break;
-                default:
+                case Type teacherType when teacherType == typeof(TeacherDataModel):
                     filePathGetInfoTable = databaseConnection.Connect("GetTeacherByEmail.sql");
                     break;
+                default:
+                    throw new ArgumentException("Invalid type");
             }
 
             dataTable = scriptHandler.ExecuteGetRequestContentFile(databaseConnection.server2, filePathGetInfoTable, Email:Email);
 
             if (dataTable.Rows.Count > 0)
             {
-                if (isStudent)
+                if (typeof(T) == typeof(StudentDataModel))
                 {
                     StudentDataModel studentData = new StudentDataModel()
                     {
@@ -49,7 +49,7 @@ namespace WindowsService.Helpers
                     };
                     return studentData;
                 }
-                else
+                else if (typeof(T) == typeof(TeacherDataModel))
                 {
                     TeacherDataModel teacherData = new TeacherDataModel()
                     {
@@ -64,15 +64,23 @@ namespace WindowsService.Helpers
                     };
                     return teacherData;
                 }
+                else
+                {
+                    throw new ArgumentException("Invalid type");
+                }
 
             }
-            else if (isStudent)
+            else if (typeof(T) == typeof(StudentDataModel))
             {
                 return new StudentDataModel();
             }
-            else
+            else if (typeof(T) == typeof(TeacherDataModel))
             {
                 return new TeacherDataModel();
+            }
+            else
+            {
+                throw new ArgumentException("Invalid type");
             }
         }
     }

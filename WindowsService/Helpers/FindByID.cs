@@ -34,7 +34,7 @@ namespace WindowsService.Helpers
 
             if (dataTable.Rows.Count > 0)
             {
-                if (isStudent)
+                if (typeof(T) == typeof(StudentDataModel))
                 {
                     StudentDataModel studentData = new StudentDataModel()
                     {

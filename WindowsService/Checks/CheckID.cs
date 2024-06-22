@@ -14,63 +14,49 @@ namespace WindowsService.Checks
 
         public bool ValidFormat<T>(string ID)
         {
-            bool isStudent = false;
-
             switch (typeof(T))
             {
                 case Type studentType when studentType == typeof(StudentDataModel):
-                    isStudent = true;
+                    if (ID.Length != 8 || !int.TryParse(ID, out _))
+                    {
+                        return false;
+                    }
+                    break;
+                case Type teacherType when teacherType == typeof(TeacherDataModel):
+                    if (ID.Length != 9 || !ID.StartsWith("T") || !int.TryParse(ID.Substring(1), out _))
+                    {
+                        return false;
+                    }
                     break;
                 default:
                     break;
             }
 
-            if (isStudent)
-            {
-                if (ID.Length != 8 || !int.TryParse(ID, out _))
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                if (ID.Length != 9 || !ID.StartsWith("T") || !int.TryParse(ID.Substring(1), out _))
-                {
-                    return false;
-                }
-            }
             return true;
         }
 
         public bool CanCreate<T>(string ID)
         {
-            bool isStudent = false;
-
             switch (typeof(T))
             {
                 case Type studentType when studentType == typeof(StudentDataModel):
-                    isStudent = true;
+                    StudentDataModel student = findByID.Find<StudentDataModel>(ID);
+                    if (string.IsNullOrEmpty(student.ID))
+                    {
+                        return true;
+                    }
+                    break;
+                case Type teacherType when teacherType == typeof(TeacherDataModel):
+                    TeacherDataModel teacher = findByID.Find<TeacherDataModel>(ID);
+                    if (string.IsNullOrEmpty(teacher.ID))
+                    {
+                        return true;
+                    }
                     break;
                 default:
                     break;
             }
 
-            if (isStudent)
-            {
-                StudentDataModel student = findByID.Find<StudentDataModel>(ID);
-                if (string.IsNullOrEmpty(student.ID))
-                {
-                    return true;
-                }
-            }
-            else
-            {
-                TeacherDataModel teacher = findByID.Find<TeacherDataModel>(ID);
-                if (string.IsNullOrEmpty(teacher.ID))
-                {
-                    return true;
-                }
-            }
             return false;
         }
     }
