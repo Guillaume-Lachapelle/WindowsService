@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WindowsService.Helpers;
+﻿using WindowsService.Helpers;
 using WindowsService.Models;
 
 namespace WindowsService.Checks
 {
     public class CheckEmail
     {
-        private FindByEmail findByEmail = new FindByEmail();
+        private readonly FindByEmail _findByEmail = new FindByEmail();
 
-        public bool Check(string Email)
+        public bool Check(string email)
         {
-            if (Email.Contains("@university.com"))
+            if (email.Contains("@university.com"))
             {
                 DatabaseConnection databaseConnection = new DatabaseConnection();
                 string filePathGetInfoStudentsTable = databaseConnection.Connect("GetStudentByEmail.sql");
                 string filePathGetInfoTeachersTable = databaseConnection.Connect("GetTeacherByEmail.sql");
 
-                StudentDataModel studentData = findByEmail.Find<StudentDataModel>(Email);
-                TeacherDataModel teacherData = findByEmail.Find<TeacherDataModel>(Email);
+                // Retrieve student and teacher data by email
+                StudentDataModel studentData = _findByEmail.Find<StudentDataModel>(email);
+                TeacherDataModel teacherData = _findByEmail.Find<TeacherDataModel>(email);
 
+                // Check if neither student nor teacher with the email exists
                 if(string.IsNullOrEmpty(studentData.SchoolEmail) && string.IsNullOrEmpty(teacherData.SchoolEmail)){
                     return true;
                 }

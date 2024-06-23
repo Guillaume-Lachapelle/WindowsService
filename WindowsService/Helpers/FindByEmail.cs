@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WindowsService.Models;
 
 namespace WindowsService.Helpers
 {
     public class FindByEmail
     {
-        private DataTable dataTable = new DataTable();
-        private ScriptHandler scriptHandler = new ScriptHandler();
+        private readonly ScriptHandler _scriptHandler = new ScriptHandler();
 
-        public dynamic Find<T>(string Email)
+        public dynamic Find<T>(string email) where T : class, new()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string filePathGetInfoTable;
@@ -30,58 +25,41 @@ namespace WindowsService.Helpers
                     throw new ArgumentException("Invalid type");
             }
 
-            dataTable = scriptHandler.ExecuteGetRequestContentFile(databaseConnection.server2, filePathGetInfoTable, Email:Email);
+            DataTable dataTable = _scriptHandler.ExecuteGetRequestContentFile(databaseConnection.Server2, filePathGetInfoTable, email:email);
 
             if (dataTable.Rows.Count > 0)
             {
+                var row = dataTable.Rows[0];
                 if (typeof(T) == typeof(StudentDataModel))
                 {
-                    StudentDataModel studentData = new StudentDataModel()
+                    return new StudentDataModel
                     {
-                        ID = dataTable.Rows[0]["ID"].ToString(),
-                        FirstName = dataTable.Rows[0]["FirstName"].ToString(),
-                        LastName = dataTable.Rows[0]["LastName"].ToString(),
-                        Program = dataTable.Rows[0]["Program"].ToString(),
-                        SchoolEmail = dataTable.Rows[0]["SchoolEmail"].ToString(),
-                        YearOfAdmission = dataTable.Rows[0]["YearOfAdmission"].ToString(),
-                        Classes = dataTable.Rows[0]["Classes"].ToString(),
-                        Graduated = dataTable.Rows[0]["Graduated"].Equals("True")
+                        ID = row["ID"].ToString(),
+                        FirstName = row["FirstName"].ToString(),
+                        LastName = row["LastName"].ToString(),
+                        Program = row["Program"].ToString(),
+                        SchoolEmail = row["SchoolEmail"].ToString(),
+                        YearOfAdmission = row["YearOfAdmission"].ToString(),
+                        Classes = row["Classes"].ToString(),
+                        Graduated = row["Graduated"].Equals("True")
                     };
-                    return studentData;
                 }
-                else if (typeof(T) == typeof(TeacherDataModel))
+                if (typeof(T) == typeof(TeacherDataModel))
                 {
-                    TeacherDataModel teacherData = new TeacherDataModel()
+                   return new TeacherDataModel
                     {
-                        ID = dataTable.Rows[0]["ID"].ToString(),
-                        FirstName = dataTable.Rows[0]["FirstName"].ToString(),
-                        LastName = dataTable.Rows[0]["LastName"].ToString(),
-                        Department = dataTable.Rows[0]["Department"].ToString(),
-                        Salary = dataTable.Rows[0]["Salary"].ToString(),
-                        HiringDate = dataTable.Rows[0]["HiringDate"].ToString(),
-                        SchoolEmail = dataTable.Rows[0]["SchoolEmail"].ToString(),
-                        Classes = dataTable.Rows[0]["Classes"].ToString()
+                        ID = row["ID"].ToString(),
+                        FirstName = row["FirstName"].ToString(),
+                        LastName = row["LastName"].ToString(),
+                        Department = row["Department"].ToString(),
+                        Salary = row["Salary"].ToString(),
+                        HiringDate = row["HiringDate"].ToString(),
+                        SchoolEmail = row["SchoolEmail"].ToString(),
+                        Classes = row["Classes"].ToString()
                     };
-                    return teacherData;
                 }
-                else
-                {
-                    throw new ArgumentException("Invalid type");
-                }
-
             }
-            else if (typeof(T) == typeof(StudentDataModel))
-            {
-                return new StudentDataModel();
-            }
-            else if (typeof(T) == typeof(TeacherDataModel))
-            {
-                return new TeacherDataModel();
-            }
-            else
-            {
-                throw new ArgumentException("Invalid type");
-            }
+            return new T();
         }
     }
 }

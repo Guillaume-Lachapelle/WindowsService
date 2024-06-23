@@ -149,12 +149,9 @@
   <ItemGroup>
     <Compile Include="Checks\CheckEmail.cs" />
     <Compile Include="Checks\CheckID.cs" />
-    <Compile Include="Helpers\CreateStudent.cs" />
-    <Compile Include="Helpers\CreateTeacher.cs" />
-    <Compile Include="Helpers\DeleteTeacher.cs" />
-    <Compile Include="Helpers\DeleteStudent.cs" />
-    <Compile Include="Helpers\EditStudent.cs" />
-    <Compile Include="Helpers\EditTeacher.cs" />
+    <Compile Include="Helpers\CreationHandler.cs" />
+    <Compile Include="Helpers\DeletionHandler.cs" />
+    <Compile Include="Helpers\EditHandler.cs" />
     <Compile Include="Helpers\FindByEmail.cs" />
     <Compile Include="Helpers\FindByID.cs" />
     <Compile Include="Helpers\RetrieveTable.cs" />

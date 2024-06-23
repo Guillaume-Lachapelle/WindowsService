@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WindowsService.Models;
 
 namespace WindowsService.Helpers
 {
     public class RetrieveTable
     {
-        private DataTable dataTable = new DataTable();
-        private ScriptHandler scriptHandler = new ScriptHandler();
+        private readonly ScriptHandler _scriptHandler = new ScriptHandler();
 
-        public List<T> RetrieveTableContents<T>()
+        public List<T> RetrieveTableContents<T>() where T : class, new()
         {
             List<T> retrievedData = new List<T>();
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string filePathGetInfoTable;
-            string server = databaseConnection.server2;
             
             switch (typeof(T))
             {
@@ -33,7 +28,7 @@ namespace WindowsService.Helpers
                     throw new ArgumentException("Invalid type");
             }
 
-            dataTable = scriptHandler.ExecuteGetRequestContentFile(server, filePathGetInfoTable);
+            DataTable dataTable = _scriptHandler.ExecuteGetRequestContentFile(databaseConnection.Server2, filePathGetInfoTable);
 
             foreach (DataRow row in dataTable.Rows)
             {
@@ -52,7 +47,7 @@ namespace WindowsService.Helpers
                     };
                     retrievedData.Add((T)Convert.ChangeType(studentData, typeof(T)));
                 }
-                else
+                else if (typeof(T) == typeof(TeacherDataModel))
                 {
                     TeacherDataModel teacherData = new TeacherDataModel()
                     {

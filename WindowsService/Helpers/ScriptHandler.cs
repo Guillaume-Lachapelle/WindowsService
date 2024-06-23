@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.IO;
@@ -9,180 +10,81 @@ namespace WindowsService.Helpers
     public class ScriptHandler
     {
 
-        private DataTable dataTable = new DataTable();
+        private DataTable _dataTable = new DataTable();
 
-        public void ExecuteCreateTableOrDatabaseFile(string connectionString, string filePath)
+        public void ExecuteSqlFromFile(string connectionString, string filePath, Action<SqlCommand> parameterSetter = null)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string data = File.ReadAllText(filePath);
-
+                string query = File.ReadAllText(filePath);
                 conn.Open();
-
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = data;
+                    cmd.CommandText = query;
+                    parameterSetter?.Invoke(cmd);
                     cmd.ExecuteNonQuery();
                 }
-                conn.Close();
             }
         }
 
-        public DataTable ExecuteGetRequestContentFile(string connectionString, string filePath, string ID = "", string Email = "")
+        public DataTable ExecuteGetRequestContentFile(string connectionString, string filePath, string id = "", string email = "")
         {
-            dataTable.Clear();
+            _dataTable.Clear();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string data = File.ReadAllText(filePath);
-
+                string query = File.ReadAllText(filePath);
                 conn.Open();
-
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@ID", ID);
-                    cmd.Parameters.AddWithValue("@Email", Email);
-                    cmd.CommandText = data;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    // this will query your datatable and return the result to your datatable
-                    adapter.Fill(dataTable);
-                    adapter.Dispose();
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.Parameters.AddWithValue("@Email", email);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(_dataTable);
+                    }
                 }
-                conn.Close();
             }
-            return dataTable;
+            return _dataTable;
         }
 
-        public void ExecuteCreateStudentFile(string connectionString, string filePath, StudentDataModel studentDataModel)
+        public void ExecuteCreateOrUpdateStudentFile(string connectionString, string filePath, StudentDataModel studentDataModel, bool isEdit = false)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            ExecuteSqlFromFile(connectionString, filePath, cmd =>
             {
-                string data = File.ReadAllText(filePath);
-
-                conn.Open();
-
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.Parameters.Clear();
-                    // Add non-nullable elements
-                    cmd.Parameters.AddWithValue("@ID", studentDataModel.ID);
-                    cmd.Parameters.AddWithValue("@FirstName", studentDataModel.FirstName);
-                    cmd.Parameters.AddWithValue("@LastName", studentDataModel.LastName);
-                    cmd.Parameters.AddWithValue("@Program", studentDataModel.Program);
-                    cmd.Parameters.AddWithValue("@SchoolEmail", studentDataModel.SchoolEmail);
-                    cmd.Parameters.AddWithValue("@YearOfAdmission", studentDataModel.YearOfAdmission);
-                    cmd.Parameters.AddWithValue("@Graduated", studentDataModel.Graduated);
-                    // Add nullable elements and check if they are null or empty. If they are, set their value to NULL in database
-                    cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(studentDataModel.Classes) ? SqlString.Null : studentDataModel.Classes);
-                    cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
-                }
-                conn.Close();
-            }
+                cmd.Parameters.AddWithValue("@ID", studentDataModel.ID);
+                cmd.Parameters.AddWithValue("@FirstName", studentDataModel.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", studentDataModel.LastName);
+                cmd.Parameters.AddWithValue("@Program", studentDataModel.Program);
+                cmd.Parameters.AddWithValue("@SchoolEmail", studentDataModel.SchoolEmail);
+                cmd.Parameters.AddWithValue("@YearOfAdmission", studentDataModel.YearOfAdmission);
+                cmd.Parameters.AddWithValue("@Graduated", studentDataModel.Graduated);
+                cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(studentDataModel.Classes) ? SqlString.Null : studentDataModel.Classes);
+            });
         }
 
-        public void ExecuteEditStudentFile(string connectionString, string filePath, StudentDataModel studentDataModel)
+        public void ExecuteCreateOrUpdateTeacherFile(string connectionString, string filePath, TeacherDataModel teacherDataModel, bool isEdit = false)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            ExecuteSqlFromFile(connectionString, filePath, cmd =>
             {
-                string data = File.ReadAllText(filePath);
-
-                conn.Open();
-
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.Parameters.Clear();
-                    // Add non-nullable elements
-                    cmd.Parameters.AddWithValue("@ID", studentDataModel.ID);
-                    cmd.Parameters.AddWithValue("@FirstName", studentDataModel.FirstName);
-                    cmd.Parameters.AddWithValue("@LastName", studentDataModel.LastName);
-                    cmd.Parameters.AddWithValue("@Program", studentDataModel.Program);
-                    cmd.Parameters.AddWithValue("@SchoolEmail", studentDataModel.SchoolEmail);
-                    cmd.Parameters.AddWithValue("@YearOfAdmission", studentDataModel.YearOfAdmission);
-                    cmd.Parameters.AddWithValue("@Graduated", studentDataModel.Graduated);
-                    // Add nullable elements and check if they are null or empty. If they are, set their value to NULL in database
-                    cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(studentDataModel.Classes) ? SqlString.Null : studentDataModel.Classes);
-                    cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
-                }
-                conn.Close();
-            }
+                cmd.Parameters.AddWithValue("@ID", teacherDataModel.ID);
+                cmd.Parameters.AddWithValue("@FirstName", teacherDataModel.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", teacherDataModel.LastName);
+                cmd.Parameters.AddWithValue("@Salary", teacherDataModel.Salary);
+                cmd.Parameters.AddWithValue("@HiringDate", teacherDataModel.HiringDate);
+                cmd.Parameters.AddWithValue("@SchoolEmail", teacherDataModel.SchoolEmail);
+                cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(teacherDataModel.Classes) ? SqlString.Null : teacherDataModel.Classes);
+                cmd.Parameters.AddWithValue("@Department", string.IsNullOrEmpty(teacherDataModel.Department) ? SqlString.Null : teacherDataModel.Department);
+            });
         }
 
-        public void ExecuteEditTeacherFile(string connectionString, string filePath, TeacherDataModel teacherDataModel)
+        public void ExecuteDelete(string connectionString, string filePath, string id)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            ExecuteSqlFromFile(connectionString, filePath, cmd =>
             {
-                string data = File.ReadAllText(filePath);
-
-                conn.Open();
-
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.Parameters.Clear();
-                    // Add non-nullable elements
-                    cmd.Parameters.AddWithValue("@ID", teacherDataModel.ID);
-                    cmd.Parameters.AddWithValue("@FirstName", teacherDataModel.FirstName);
-                    cmd.Parameters.AddWithValue("@LastName", teacherDataModel.LastName);
-                    cmd.Parameters.AddWithValue("@Salary", teacherDataModel.Salary);
-                    cmd.Parameters.AddWithValue("@HiringDate", teacherDataModel.HiringDate);
-                    cmd.Parameters.AddWithValue("@SchoolEmail", teacherDataModel.SchoolEmail);
-                    // Add nullable elements and check if they are null or empty. If they are, set their value to NULL in database
-                    cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(teacherDataModel.Classes) ? SqlString.Null : teacherDataModel.Classes);
-                    cmd.Parameters.AddWithValue("@Department", string.IsNullOrEmpty(teacherDataModel.Department) ? SqlString.Null : teacherDataModel.Department);
-                    cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
-                }
-                conn.Close();
-            }
+                cmd.Parameters.AddWithValue("@ID", id);
+            });
         }
-
-        public void ExecuteCreateTeacherFile(string connectionString, string filePath, TeacherDataModel teacherDataModel)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string data = File.ReadAllText(filePath);
-
-                conn.Open();
-
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.Parameters.Clear();
-                    // Add non-nullable elements
-                    cmd.Parameters.AddWithValue("@ID", teacherDataModel.ID);
-                    cmd.Parameters.AddWithValue("@FirstName", teacherDataModel.FirstName);
-                    cmd.Parameters.AddWithValue("@LastName", teacherDataModel.LastName);
-                    cmd.Parameters.AddWithValue("@Salary", teacherDataModel.Salary);
-                    cmd.Parameters.AddWithValue("@HiringDate", teacherDataModel.HiringDate);
-                    cmd.Parameters.AddWithValue("@SchoolEmail", teacherDataModel.SchoolEmail);
-                    // Add nullable elements and check if they are null or empty. If they are, set their value to NULL in database
-                    cmd.Parameters.AddWithValue("@Classes", string.IsNullOrEmpty(teacherDataModel.Classes) ? SqlString.Null : teacherDataModel.Classes);
-                    cmd.Parameters.AddWithValue("@Department", string.IsNullOrEmpty(teacherDataModel.Department) ? SqlString.Null : teacherDataModel.Department);
-                    cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
-                }
-                conn.Close();
-            }
-        }
-
-        public void ExecuteDelete(string connectionString, string filePath, string ID)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string data = File.ReadAllText(filePath);
-
-                conn.Open();
-
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@ID", ID);
-                    cmd.CommandText = data;
-                    cmd.ExecuteNonQuery();
-                }
-                conn.Close();
-            }
-        }
-
     }
 }

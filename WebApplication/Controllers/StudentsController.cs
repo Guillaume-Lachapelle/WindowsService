@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.Http;
-using System.Threading.Tasks;
 using WindowsService.Helpers;
 using WindowsService.Models;
 using WindowsService.Checks;
@@ -18,15 +17,16 @@ namespace WebApplication.Controllers
 
         #region Proxies
 
-        private readonly CheckID checkID = new CheckID();
-        private readonly CheckEmail checkEmail = new CheckEmail();
-        private readonly CreateStudent createStudentProxy = new CreateStudent();
-        private readonly RetrieveTable retrieveTableProxy = new RetrieveTable();
-        private readonly DeleteStudent deleteStudentProxy = new DeleteStudent();
-        private readonly EditStudent editStudentProxy = new EditStudent();
-        private readonly FindByID findByIDProxy = new FindByID();
+        private readonly CheckID _checkIDProxy = new CheckID();
+        private readonly CheckEmail _checkEmailProxy = new CheckEmail();
+        private readonly RetrieveTable _retrieveTableProxy = new RetrieveTable();
+        private readonly CreationHandler _creationHandlerProxy = new CreationHandler();
+        private readonly DeletionHandler _deletionHandlerProxy = new DeletionHandler();
+        private readonly EditHandler _editHandlerProxy = new EditHandler();
+        private readonly FindByID _findByIDProxy = new FindByID();
 
         #endregion
+
 
         #region Methods
 
@@ -40,11 +40,11 @@ namespace WebApplication.Controllers
         {
             try
             {
-                var inst = retrieveTableProxy.RetrieveTableContents<StudentDataModel>();
-                if (inst.Count != 0)
+                var students = _retrieveTableProxy.RetrieveTableContents<StudentDataModel>();
+                if (students.Count != 0)
                 {
                     Logger.MonitoringLogger.Info("Request successful for endpoint GET api/students");
-                    return Ok(inst);
+                    return Ok(students);
                 }
                 else
                 {
@@ -70,7 +70,7 @@ namespace WebApplication.Controllers
         {
             try
             {
-                StudentDataModel student = findByIDProxy.Find<StudentDataModel>(ID);
+                StudentDataModel student = _findByIDProxy.Find<StudentDataModel>(ID);
                 if (student.ID != null && student.ID != "")
                 {
                     Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/students/search/{ID}.");
@@ -118,16 +118,16 @@ namespace WebApplication.Controllers
                 }
 
                 // If the ID doesn't have the right format, return bad request.
-                if (!checkID.ValidFormat<StudentDataModel>(ID))
+                if (!_checkIDProxy.ValidFormat<StudentDataModel>(ID))
                 {
                     Logger.MonitoringLogger.Error("Request failed for endpoint POST api/students/{ID}/{FirstName}/{LastName}. The ID was not in the right format. The ID needs to be a string of 8 numbers.");
                     return Content(System.Net.HttpStatusCode.BadRequest, "The ID was not in the right format. The ID needs to be a string of 8 numbers.");
                 }
 
-                if (checkID.CanCreate<StudentDataModel>(ID))
+                if (_checkIDProxy.CanCreate<StudentDataModel>(ID))
                 {
 
-                    if (checkEmail.Check(createStudentModelBody.SchoolEmail))
+                    if (_checkEmailProxy.Check(createStudentModelBody.SchoolEmail))
                     {
                         bool Graduated = false;
                         StudentDataModel student = new StudentDataModel()
@@ -142,14 +142,14 @@ namespace WebApplication.Controllers
                             Graduated = Graduated
                         };
 
-                        bool success = createStudentProxy.Create(student);
+                        bool success = _creationHandlerProxy.Create<StudentDataModel>(student);
                         if (!success)
                         {
                             Logger.MonitoringLogger.Error($"Request failed for endpoint POST api/students/{ID}/{FirstName}/{LastName}. The student could not be created.");
                             return Content(System.Net.HttpStatusCode.InternalServerError, "The student could not be created.");
                         }
 
-                        student = findByIDProxy.Find<StudentDataModel>(ID);
+                        student = _findByIDProxy.Find<StudentDataModel>(ID);
                         Logger.MonitoringLogger.Info($"Request successful for endpoint GET api/students/{ID}/{FirstName}/{LastName}.");
                         return Created($"api/students/{ID}/{FirstName}/{LastName}", student);
                     }
@@ -185,7 +185,7 @@ namespace WebApplication.Controllers
             try
             {
                 // Check if the table Students contains a student with the requested ID
-                var student = findByIDProxy.Find<StudentDataModel>(ID);
+                var student = _findByIDProxy.Find<StudentDataModel>(ID);
                 if (student.ID == null || student.ID == "")
                 {
                     Logger.MonitoringLogger.Error($"Request failed for endpoint PUT api/students/{ID}. No student found with the requested ID {ID}.");
@@ -204,8 +204,8 @@ namespace WebApplication.Controllers
                     Graduated = studentModelBody.Graduated
                 };
 
-                var inst = editStudentProxy.Edit(ID, studentDataModel);
-                if (inst)
+                var success = _editHandlerProxy.Edit<StudentDataModel>(ID, studentDataModel);
+                if (success)
                 {
                     Logger.MonitoringLogger.Info($"Request successful for endpoint PUT api/students/{ID}");
                     return Created($"api/students/{ID}", studentDataModel);
@@ -229,21 +229,21 @@ namespace WebApplication.Controllers
         /// <param name="ID">The ID of the student to delete.</param>
         /// <returns>A confirmation message.</returns>
         [HttpDelete]
-        [Route("{ID}/delete")]
+        [Route("{ID}")]
         public IHttpActionResult Delete(string ID)
         {
             try
             {
                 // Check if the table Students contains a student with the requested ID
-                var student = findByIDProxy.Find<StudentDataModel>(ID);
+                var student = _findByIDProxy.Find<StudentDataModel>(ID);
                 if (student.ID == null || student.ID == "")
                 {
                     Logger.MonitoringLogger.Error($"Request failed for endpoint DELETE api/students/{ID}. No student found with the requested ID {ID}.");
                     return Content(HttpStatusCode.NotFound, $"No student found with the requested ID {ID}.");
                 }
 
-                var inst = deleteStudentProxy.Delete(ID);
-                if (inst)
+                var success = _deletionHandlerProxy.Delete<StudentDataModel>(ID);
+                if (success)
                 {
                     Logger.MonitoringLogger.Info($"Request successful for endpoint DELETE api/students/{ID}");
                     return Ok($"Request successful. The student with ID {ID} has been deleted");
