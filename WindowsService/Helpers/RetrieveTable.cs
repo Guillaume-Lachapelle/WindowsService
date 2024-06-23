@@ -43,7 +43,7 @@ namespace WindowsService.Helpers
                         SchoolEmail = row["SchoolEmail"].ToString(),
                         YearOfAdmission = row["YearOfAdmission"].ToString(),
                         Classes = row["Classes"].ToString(),
-                        Graduated = row["Graduated"].Equals("True")
+                        Graduated = Convert.ToBoolean(row["Graduated"])
                     };
                     retrievedData.Add((T)Convert.ChangeType(studentData, typeof(T)));
                 }

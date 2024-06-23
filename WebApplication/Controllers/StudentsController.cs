@@ -90,6 +90,44 @@ namespace WebApplication.Controllers
         }
 
         /// <summary>
+        /// Retrieves students who have graduated.
+        /// </summary>
+        /// <returns>A list of students who have graduated</returns>
+        [HttpGet]
+        [Route("graduates")]
+        public IHttpActionResult GetGraduateStudents()
+        {
+            try
+            {
+                var students = _retrieveTableProxy.RetrieveTableContents<StudentDataModel>();
+                if (students.Count != 0)
+                {
+                    var graduatedStudents = students.FindAll(student => student.Graduated == true);
+                    if (graduatedStudents.Count != 0)
+                    {
+                        Logger.MonitoringLogger.Info("Request successful for endpoint GET api/students/graduated");
+                        return Ok(graduatedStudents);
+                    }
+                    else
+                    {
+                        Logger.MonitoringLogger.Info("Request successful for endpoint GET api/students/graduated");
+                        return Content(System.Net.HttpStatusCode.OK, "The table Students does not contain any graduated students.");
+                    }
+                }
+                else
+                {
+                    Logger.MonitoringLogger.Info("Request successful for endpoint GET api/students/graduated");
+                    return Content(System.Net.HttpStatusCode.OK, "The table Students does not contain any elements.");
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.MonitoringLogger.Error(e.Message);
+                return Content(System.Net.HttpStatusCode.InternalServerError, e);
+            }
+        }
+
+        /// <summary>
         /// Creates a new student.
         /// </summary>
         /// <param name="createStudentModelBody">The student data model.</param>

@@ -41,7 +41,7 @@ namespace WindowsService.Helpers
                         SchoolEmail = row["SchoolEmail"].ToString(),
                         YearOfAdmission = row["YearOfAdmission"].ToString(),
                         Classes = row["Classes"].ToString(),
-                        Graduated = row["Graduated"].Equals("True")
+                        Graduated = Convert.ToBoolean(row["Graduated"])
                     };
                 }
                 if (typeof(T) == typeof(TeacherDataModel))
